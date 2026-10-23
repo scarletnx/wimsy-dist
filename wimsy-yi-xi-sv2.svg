@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Yi Xi 2's black ponytail, cap and mask and colours.
+     The leaves keep Wimsy's own shapes; colours from VIMALION PROJECT's design of Yi Xi 2 (vimalion.pro/yixi), free to use; fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>Wimsy with Yi Xi 2's black ponytail, cap and mask</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (black ponytail, cap and mask, Yi Xi 2's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Yi Xi 2: a long black ponytail, a dark grey cap, a black mask, a black dress with a crimson strap and tag, dark grey long gloves, a face in the cap's lilac shade -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3F40"/>
+      <stop offset="1" stop-color="#070808"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33383A"/>
+      <stop offset="1" stop-color="#050606"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F2323"/>
+      <stop offset="1" stop-color="#020302"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#262A2B"/>
+      <stop offset="1" stop-color="#040505"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151818"/>
+      <stop offset="1" stop-color="#020302"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A383B"/>
+      <stop offset="1" stop-color="#1E1D20"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#BFA8C2"/>
+      <stop offset="1" stop-color="#FDD9C5"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#2E2730"/>
+      <stop offset="0.7" stop-color="#120E12"/>
+      <stop offset="1" stop-color="#040304"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her long ponytail: one leaf, tied in dark grey with a crimson band -->
+    <g id="drill">
+      <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round" d="M -22,6 Q -42,120 2,236 Q 34,118 22,6 Q 0,-6 -22,6 Z"/>
+      <rect x="-30" y="-7" width="60" height="14" rx="7" fill="#424442" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="-23" y="-2" width="46" height="4" rx="2" fill="#CC164B"/>
+    </g>
+    <linearGradient id="yixi-cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A5D5A"/><stop offset="0.5" stop-color="#424442"/><stop offset="1" stop-color="#2C2E2C"/></linearGradient>
+    <linearGradient id="yixi-gloves" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#555855"/><stop offset="0.5" stop-color="#424442"/><stop offset="1" stop-color="#2E302E"/></linearGradient>
+    <pattern id="yixi-dots" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.1" fill="#2E302E"/></pattern>
+  </defs>
+
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="url(#yixi-gloves)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's crimson trim along the front wing -->
+  <path fill="none" stroke="#CC164B" stroke-width="6" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the crimson tag on her dress -->
+  <rect transform="rotate(-58 262 112)" x="250" y="106" width="24" height="10" rx="2" fill="#CC164B" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- the two leaves below, in the hair's black -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#5C666C" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- her black mask, from under the eyes to the chin -->
+  <g clip-path="url(#head-clip)">
+    <path transform="translate(217.8,336.7) rotate(-26.68)" fill="#0A0B0A" d="M 112,40 Q 176,30 230,38 Q 290,40 340,22 L 340,140 L 112,140 Z"/>
+    <path transform="translate(217.8,336.7) rotate(-26.68)" fill="url(#yixi-dots)" d="M 112,40 Q 176,30 230,38 Q 290,40 340,22 L 340,140 L 112,140 Z"/>
+  </g>
+  <!-- the eyes, where Wimsy has them, Yi Xi 2's: dark, a small red light at the middle, half shut in the cap's shade, tired lines under them -->
+  <g transform="rotate(24.165289)">
+    <circle cx="434.99091" cy="99.701668" r="23.114985" fill="#0B0A0B"/>
+    <circle cx="432.47" cy="99.30" r="17.5" fill="url(#iris)"/>
+    <circle cx="485.51288" cy="44.356552" r="23.114985" fill="#0B0A0B"/>
+    <circle cx="482.99" cy="43.96" r="17.5" fill="url(#iris)"/>
+  </g>
+  <circle transform="translate(217.8,336.7) rotate(-26.68)" cx="262" cy="4" r="2.6" fill="#0B0A0B"/>
+  <clipPath id="eye-clip"><circle r="24.5"/></clipPath>
+  <g transform="translate(356.06,269.04) rotate(-26.68)" stroke-linecap="round">
+    <path clip-path="url(#eye-clip)" fill="#FFFFFF" d="M 12,6 Q 19,5 22,11 Q 16,12 12,6 Z"/>
+    <circle cx="-4" cy="9" r="6.5" fill="#CC164B" fill-opacity="0.3"/>
+    <circle cx="-4" cy="9" r="3.6" fill="#CC164B"/>
+    <path clip-path="url(#eye-clip)" fill="#C9B3C9" d="M -30,-40 L 30,-40 L 30,4 Q 0,-4 -30,1 Z"/>
+    <path stroke="#0B0A0B" stroke-width="4.5" fill="none" d="M -23,1 Q 0,-4 23,3 L 27,0"/>
+    <path stroke="#0B0A0B" stroke-width="2" fill="none" d="M -12,29 L 4,30 M -6,34 L 10,35"/>
+  </g>
+  <g transform="translate(424.81,239.22) rotate(-26.68)" stroke-linecap="round">
+    <path clip-path="url(#eye-clip)" fill="#FFFFFF" d="M 12,6 Q 19,5 22,11 Q 16,12 12,6 Z"/>
+    <circle cx="-4" cy="9" r="6.5" fill="#CC164B" fill-opacity="0.3"/>
+    <circle cx="-4" cy="9" r="3.6" fill="#CC164B"/>
+    <path clip-path="url(#eye-clip)" fill="#C9B3C9" d="M -30,-40 L 30,-40 L 30,4 Q 0,-4 -30,1 Z"/>
+    <path stroke="#0B0A0B" stroke-width="4.5" fill="none" d="M -23,1 Q 0,-4 23,3 L 27,0"/>
+    <path stroke="#0B0A0B" stroke-width="2" fill="none" d="M -12,29 L 4,30 M -6,34 L 10,35"/>
+  </g>
+
+  <!-- her ponytail, in front -->
+  <use xlink:href="#drill" transform="translate(322,318) rotate(-8) scale(0.86,0.5)"/>
+  <!-- her cap, the visor to the front, over the eyes -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#232523" stroke="#FFFFFF" stroke-width="4" d="M 222,-42 Q 296,-60 328,-14 Q 286,-22 222,-42 Z"/>
+    <path fill="url(#yixi-cap)" stroke="#FFFFFF" stroke-width="4" d="M 98,-34 Q 170,-126 256,-38 Q 176,-52 98,-34 Z"/>
+    <path fill="none" stroke="#232523" stroke-width="2.2" d="M 174,-82 Q 152,-62 140,-42 M 178,-82 Q 202,-64 214,-44"/>
+    <circle cx="176" cy="-83" r="4.5" fill="#424442" stroke="#FFFFFF" stroke-width="2.2"/>
+  </g>
+</svg>

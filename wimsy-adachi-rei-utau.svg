@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Adachi Rei's side tail and antennas and colours.
+     The leaves keep Wimsy's own shapes; colours from missile39's first illustration (2017); fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>Wimsy with Adachi Rei's side tail and antennas</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (side tail and antennas, Adachi Rei's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Rei UTAU: orange hair, orange lens eyes, a white jacket with orange stripes, a black turtleneck with 00 on it -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F59A3A"/>
+      <stop offset="1" stop-color="#E0701F"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F18F2A"/>
+      <stop offset="1" stop-color="#DA771B"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DA771B"/>
+      <stop offset="1" stop-color="#A05330"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DA771B"/>
+      <stop offset="1" stop-color="#A05330"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B8611E"/>
+      <stop offset="1" stop-color="#7E4020"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F4F4"/>
+      <stop offset="1" stop-color="#D3D3D7"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F7D9CE"/>
+      <stop offset="1" stop-color="#FDEDE6"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#F7B060"/>
+      <stop offset="0.7" stop-color="#E0761F"/>
+      <stop offset="1" stop-color="#8A3C10"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her short side tail: one leaf, tied in a white ribbon -->
+    <g id="drill">
+      <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round" d="M -22,6 Q -42,120 2,236 Q 34,118 22,6 Q 0,-6 -22,6 Z"/>
+      <rect x="-30" y="-7" width="60" height="14" rx="7" fill="#F4F4F4" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="-23" y="-2" width="46" height="4" rx="2" fill="#D0D0D4"/>
+    </g>
+  </defs>
+
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="#232325" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's orange trim along the front wing -->
+  <path fill="none" stroke="#F18F2A" stroke-width="5" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the mark on her arm -->
+  <g transform="rotate(-8 192 100) translate(186,92)" stroke="#F4F4F4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path transform="translate(0,0)" d="M 4,0 A 4,8 0 1 1 4,16 A 4,8 0 1 1 4,0"/>
+    <path transform="translate(12,0)" d="M 4,0 A 4,8 0 1 1 4,16 A 4,8 0 1 1 4,0"/>
+  </g>
+  <!-- the two leaves below, in the hair's orange -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#FFD7A8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- the black router on her head, its two antennas -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)" stroke-linecap="round">
+    <path stroke="#2C2A28" stroke-width="3.5" fill="none" d="M 134,-54 L 126,-86 M 166,-56 L 174,-88"/>
+    <circle cx="126" cy="-86" r="3.5" fill="#FFFFFF" stroke="#2C2A28" stroke-width="2"/>
+    <circle cx="174" cy="-88" r="3.5" fill="#FFFFFF" stroke="#2C2A28" stroke-width="2"/>
+    <rect x="120" y="-60" width="58" height="18" rx="6" fill="#2C2A28" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="128" y="-53" width="10" height="3" rx="1.5" fill="#ED7029"/>
+    <circle cx="160" cy="-51" r="5" fill="#FFF4C8" stroke="#2C2A28" stroke-width="2"/>
+  </g>
+  <!-- the eyes, where Wimsy has them, Rei's UTAU eyes: orange camera lenses, wide open, silly -->
+  <g transform="rotate(24.165289)">
+    <circle cx="434.99091" cy="99.701668" r="23.114985" fill="#3A1E0E"/>
+    <circle cx="434.99" cy="96.20" r="17.5" fill="url(#iris)"/>
+    <circle cx="434.99" cy="96.20" r="9.5" fill="none" stroke="#3A1E0E" stroke-width="2.4"/>
+    <circle cx="434.99" cy="96.20" r="4.2" fill="#3A1E0E"/>
+    <circle cx="429.99" cy="89.20" r="3.4" fill="#FFFFFF"/>
+    <circle cx="439.49" cy="100.70" r="1.8" fill="#FFFFFF" fill-opacity="0.85"/>
+    <circle cx="485.51288" cy="44.356552" r="23.114985" fill="#3A1E0E"/>
+    <circle cx="485.51" cy="40.86" r="17.5" fill="url(#iris)"/>
+    <circle cx="485.51" cy="40.86" r="9.5" fill="none" stroke="#3A1E0E" stroke-width="2.4"/>
+    <circle cx="485.51" cy="40.86" r="4.2" fill="#3A1E0E"/>
+    <circle cx="480.51" cy="33.86" r="3.4" fill="#FFFFFF"/>
+    <circle cx="490.01" cy="45.36" r="1.8" fill="#FFFFFF" fill-opacity="0.85"/>
+  </g>
+
+  <!-- the side tail, in front -->
+  <use xlink:href="#drill" transform="translate(322,318) rotate(-8) scale(0.9,0.47)"/>
+</svg>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Android's green, with the antennas and colours.
+     The leaves keep Wimsy's own shapes; the system's own colours; fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>Wimsy with Android's green, with the antennas</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (green, with the antennas, Android's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Android: green hair, front and sleeves, white trim, two antennas -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5BE69A"/>
+      <stop offset="1" stop-color="#2BB36A"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3DDC84"/>
+      <stop offset="1" stop-color="#20A35C"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2BB36A"/>
+      <stop offset="1" stop-color="#1A8048"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2BB36A"/>
+      <stop offset="1" stop-color="#1A8048"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20A35C"/>
+      <stop offset="1" stop-color="#146638"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7FEBAE"/>
+      <stop offset="1" stop-color="#3DDC84"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F7D9CE"/>
+      <stop offset="1" stop-color="#FDEDE6"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#A8F5C8"/>
+      <stop offset="0.7" stop-color="#2BB36A"/>
+      <stop offset="1" stop-color="#0F5A31"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- no tail: the head's back and the two leaves below -->
+  </defs>
+
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="#1A8048" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's white trim along the front wing -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the two leaves below, in the hair's green -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#D6FBE5" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- Android's two antennas, out of the top of the head -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)" stroke-linecap="round" fill="none">
+    <path stroke="#FFFFFF" stroke-width="11" d="M 186,-40 L 172,-84 M 236,-38 L 250,-82"/>
+    <path stroke="#3DDC84" stroke-width="6" d="M 186,-40 L 172,-84 M 236,-38 L 250,-82"/>
+  </g>
+  <!-- the eyes, where Wimsy has them, green -->
+  <g transform="rotate(24.165289)">
+    <circle cx="434.99091" cy="99.701668" r="23.114985" fill="#073A1E"/>
+    <circle cx="434.99" cy="96.20" r="17.5" fill="url(#iris)"/>
+    <circle cx="430.39" cy="89.40" r="7" fill="#FFFFFF"/>
+    <circle cx="440.39" cy="103.60" r="3" fill="#FFFFFF" fill-opacity="0.85"/>
+    <circle cx="485.51288" cy="44.356552" r="23.114985" fill="#073A1E"/>
+    <circle cx="485.51" cy="40.86" r="17.5" fill="url(#iris)"/>
+    <circle cx="480.91" cy="34.06" r="7" fill="#FFFFFF"/>
+    <circle cx="490.91" cy="48.26" r="3" fill="#FFFFFF" fill-opacity="0.85"/>
+  </g>
+
+</svg>

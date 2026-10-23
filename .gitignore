@@ -1,0 +1,6 @@
+# what the generators write; publish.sh copies it into the top folder
+tools/out/
+__pycache__/
+tools/sheet.*/
+# the reference art is its owners', read here and never published
+ref/
