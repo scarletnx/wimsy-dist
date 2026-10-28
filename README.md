@@ -23,6 +23,11 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg` and `.png` here, as publish.sh makes the others,
   and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing at 74% on a dark disc, so Discord's round crop
   keeps it whole. Not on the sheets: she is not a singer.
+- `tools/make_accord.py`: Accord, DraVee's forge (accord.dravee.dev), from its mark (the forge's
+  `assets/img/logo.svg`): black and white, the mark's rope as small white leaves slanted across the black trim, its cross
+  of four petals, four leaves with a dot between each two, on the arm. `wimsy-accord.svg` and `.png` here, and
+  `accordwimsy-avatar.png`, the AccordWimsy bot's avatar: the mark's disc, its rope a band of white leaves round the black
+  edge, the drawing on the white middle, centred on its smallest enclosing circle. Not on the sheets: it is a forge.
 
 ## Making them all again
 
@@ -33,6 +38,8 @@ font (only for the names on the sheets).
     python3 -I make_versions.py
     python3 -I make_vocaloid.py
     python3 -I make_platforms.py
+    python3 -I make_aogo.py
+    python3 -I make_accord.py
     sh publish.sh
 
 The generators write into `tools/out/`, and `publish.sh` copies from there into this folder. Teto UTAU is

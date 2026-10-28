@@ -52,6 +52,15 @@ magick $rows -append "$D/wimsy-versions.png"
 cp "$S/out/wimsy-aogo.svg" "$D/wimsy-aogo.svg"
 xmllint --noout "$D/wimsy-aogo.svg"
 rsvg-convert -w 1024 -h 1024 "$D/wimsy-aogo.svg" -o "$D/wimsy-aogo.png"
+# Accord (make_accord.py): its SVG and PNG, and the AccordWimsy bot's avatar, the drawing on Accord's disc ringed by
+# its rope; not on the sheets: Accord is a forge, not a singer
+for f in wimsy-accord accordwimsy-avatar; do
+    xmllint --noout "$S/out/$f.svg"
+    if grep -q '<image\|href="http' "$S/out/$f.svg"; then echo "publish.sh: $f.svg embeds or links something" >&2; exit 1; fi
+done
+cp "$S/out/wimsy-accord.svg" "$D/wimsy-accord.svg"
+rsvg-convert -w 1024 -h 1024 "$D/wimsy-accord.svg" -o "$D/wimsy-accord.png"
+rsvg-convert -w 1024 -h 1024 "$S/out/accordwimsy-avatar.svg" -o "$D/accordwimsy-avatar.png"
 # the systems' Wimsys (make_platforms.py): each SVG, its PNG, and its 128 px emoji, the icon beside each download in
 # ReiWimsy's cards. Not on the sheets: they are not singers
 mkdir -p "$D/emoji"
