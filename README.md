@@ -23,6 +23,12 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg` and `.png` here, as publish.sh makes the others,
   and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing at 74% on a dark disc, so Discord's round crop
   keeps it whole. Not on the sheets: she is not a singer.
+- `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
+  (its pink, purple and blue, the cyan of its mark; Eden's `dist/dev.eden_emu.eden.svg`) with a test probe, its needle
+  out toward the drawing's empty lower right and its cable curling after it. `wimsy-edenprobe.svg` and `.png` here,
+  and `edenprobe-icon.svg` and `.png`, edenprobe's cover: the drawing over the banded sun its `static/icon.svg` had,
+  with the program's name; edenprobe's `make icon` turns it into the NRO's icon.jpg. Not on the sheets: it is a
+  program.
 - `tools/make_accord.py`: Accord, DraVee's forge (accord.dravee.dev), from its mark (the forge's
   `assets/img/logo.svg`): black and white, the mark's rope as small white leaves slanted across the black trim, its cross
   of four petals, four leaves with a dot between each two, on the arm. `wimsy-accord.svg` and `.png` here, and
