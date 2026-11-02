@@ -19,6 +19,9 @@ HEAD = "translate(217.8,336.7) rotate(-26.68)"
 EYE_TURN = 24.165289
 EYES = ((434.99091, 99.701668), (485.51288, 44.356552))
 RIM = 23.114985
+# Teto's curl on top of the head, in the head's frame: what an ahoge of a design's own replaces
+TETO_CURL = ("M 126,-38 C 110,-100 180,-126 196,-88 C 204,-68 184,-54 172,-66 C 180,-78 168,-96 150,-86 "
+             "C 136,-78 138,-56 142,-38 Z")
 
 
 def tail_group(gid, light, tie, band, tie_h, vein=None):
@@ -56,7 +59,8 @@ def eyes_svg(p):
     a camera's lens for an iris, a dark ring and a dot, wide open, small glints only; lens-soft: the lens under a
     gently arched lid; lens-cool: the lens under a flat lid half way down; sly: a dark iris with a small light at its
     middle (pupil), turned aside under a heavy lid that droops to the outer corner, the white showing at that corner,
-    two short tired lines under it; caret: shut in a smile, each eye a ^ (Yi Xi's ^q^)"""
+    two short tired lines under it; caret: shut in a smile, each eye a ^ (Yi Xi's ^q^); tired: open under a heavy lid
+    that sags to the outer corner, a dull small glint, a dark crescent under each eye (bags)"""
     look = p.get("eyes", "round")
     lens = look.startswith("lens")
     # the eyes turned aside, toward the back of the head, for the tsundere's look away
@@ -67,6 +71,16 @@ def eyes_svg(p):
         out.append('  <radialGradient id="iris2" cx="0.5" cy="0.62" r="0.6">'
                    f'<stop offset="0" stop-color="{p["iris2"][0]}"/><stop offset="0.7" stop-color="{p["iris2"][1]}"/>'
                    f'<stop offset="1" stop-color="{p["iris2"][2]}"/></radialGradient>\n')
+    lids = [p["lid"]] * 2
+    if p["lid"] == "skin":  # the lid in the face's own gradient, laid on the page where the head's is: no edge shows
+        skin = p["skin"] or ("#F7D9CE", "#FDEDE6")
+        for i in range(2):
+            cx, cy = face_centre(i)
+            out.append(f'  <linearGradient id="lid-{i}" gradientUnits="userSpaceOnUse" x1="217.78" y1="0" x2="508.05" '
+                       f'y2="0" gradientTransform="rotate(26.68) translate({-cx:.2f},{-cy:.2f})">'
+                       f'<stop offset="0" stop-color="{skin[0]}"/><stop offset="1" stop-color="{skin[1]}"/>'
+                       '</linearGradient>\n')
+            lids[i] = f"url(#lid-{i})"
     out.append(f'  <g transform="rotate({EYE_TURN})">\n')
     for i, (x, y) in enumerate(EYES):
         if look == "caret":  # shut: no eye to draw, its ^ comes below
@@ -83,10 +97,11 @@ def eyes_svg(p):
             continue
         if look == "sly":  # no glint: the small light at the middle comes with the lid, below it
             continue
-        if look != "deadpan":
+        dull = look in ("deadpan", "tired")  # no big glint: the lid covers where it would be
+        if not dull:
             out.append(f'    <circle cx="{x - 4.6 + sx:.2f}" cy="{y - 10.3 + sy:.2f}" r="7" fill="#FFFFFF"/>\n')
         out.append(f'    <circle cx="{x + 5.4 + sx:.2f}" cy="{y + 3.9 + sy:.2f}" r="3" fill="#FFFFFF" '
-                   f'fill-opacity="{0.55 if look == "deadpan" else 0.85}"/>\n')
+                   f'fill-opacity="{0.55 if dull else 0.85}"/>\n')
     out.append("  </g>\n")
     if p["mole"]:  # a beauty mark, in the head's frame
         out.append(f'  <circle transform="{HEAD}" cx="{p["mole"][0]}" cy="{p["mole"][1]}" r="2.6" fill="{p["rim"]}"/>\n')
@@ -124,6 +139,14 @@ def eyes_svg(p):
             g.append(f'    <path clip-path="url(#eye-clip)" fill="{p["lid"]}" d="M -30,-40 L 30,-40 L 30,4 Q 0,-4 -30,1 Z"/>\n')
             g.append(f'    <path stroke="{p["rim"]}" stroke-width="4.5" fill="none" d="M -23,1 Q 0,-4 23,3 L 27,0"/>\n')
             g.append(f'    <path stroke="{p["rim"]}" stroke-width="2" fill="none" d="M -12,29 L 4,30 M -6,34 L 10,35"/>\n')
+        elif look == "tired":  # the lid sags to the outer corner, away from the other eye; the bags under it
+            left, right = (0, -8) if i == 0 else (-8, 0)  # the lid's edge at x = -23 and at x = 23
+            g.append(f'    <path fill="{p["bags"]}" fill-opacity="0.55" '
+                     'd="M -21,13 A 25,25 0 0 0 21,13 Q 0,49 -21,13 Z"/>\n')
+            g.append(f'    <path clip-path="url(#eye-clip)" fill="{lids[i]}" '
+                     f'd="M -30,-40 L 30,-40 L 30,{right} L 23,{right} Q 0,-10 -23,{left} L -30,{left} Z"/>\n')
+            g.append(f'    <path stroke="{p["rim"]}" stroke-width="4.5" fill="none" '
+                     f'd="M -23,{left} Q 0,-10 23,{right}"/>\n')
         elif look == "caret":  # a ^ standing upright as it is typed, whatever the head's tilt: shut in a smile
             out.append(f'  <path transform="translate({cx:.2f},{cy:.2f})" stroke="{p["rim"]}" stroke-width="5.5" '
                        'stroke-linejoin="round" stroke-linecap="round" fill="none" d="M -15,7 L 0,-9 L 15,7"/>\n')
@@ -164,6 +187,9 @@ def vocaloid(p):
         s = s[:a] + s[b:]
     else:
         s = s.replace("Teto's curl on top of the head", f"{p['who']}'s curl on top of the head")
+    if isinstance(p["ahoge"], str):  # a curl of the design's own, in the head's frame, in place of Teto's
+        assert TETO_CURL in s
+        s = s.replace(TETO_CURL, p["ahoge"])
     # what a design draws its own way: gradients of its own, a wing or each leaf below in one of them, its face's
     # colour, its hair's outline over the head
     if p["defs_extra"]:
@@ -212,7 +238,7 @@ def character(**kw):
             "front_extras": "", "eyes": "round", "lid": "#FCE9E1", "brow": "#000000", "trim_width": 5,
             "ring": "#000000", "defs_extra": "", "front_fill": "", "lower_fills": (), "skin": None, "hair_path": "",
             "hair_fill": "", "iris2": None, "mouth": "", "back_extras": "", "tail_vein": None, "pupil": "#FFFFFF",
-            "mole": None}
+            "mole": None, "bags": "#82728C"}
     base.update(kw)
     return base
 

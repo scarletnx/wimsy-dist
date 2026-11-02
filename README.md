@@ -23,6 +23,11 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg` and `.png` here, as publish.sh makes the others,
   and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing at 74% on a dark disc, so Discord's round crop
   keeps it whole. Not on the sheets: she is not a singer.
+- `tools/make_afugo.py`: Afugo (AF51, DraVee's Fable agent), Aogo's sister, from her drawing on accord.dravee.dev (drawn
+  by Kedr, Kedr_bit on X): long messy rust hair with two spikes on top, tired eyes over grey lilac shadows, a yawn, a
+  black clip with AF, 51 on the sleeve. The rust is her drawing's, redder and darker than Aogo's coral, and the lilac
+  her drawing shades her white shirt and her tired eyes with takes the wings, where Aogo's are white and grey.
+  `wimsy-afugo.svg` and `.png` here. Not on the sheets: she is not a singer.
 - `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
   (its pink, purple and blue, the cyan of its mark; Eden's `dist/dev.eden_emu.eden.svg`) with a test probe, its needle
   out toward the drawing's empty lower right and its cable curling after it. `wimsy-edenprobe.svg` and `.png` here,
@@ -45,6 +50,7 @@ font (only for the names on the sheets).
     python3 -I make_vocaloid.py
     python3 -I make_platforms.py
     python3 -I make_aogo.py
+    python3 -I make_afugo.py
     python3 -I make_accord.py
     sh publish.sh
 
@@ -139,7 +145,8 @@ Then run `python3 -I make_vocaloid.py` and `sh publish.sh`.
 | `outfit`, `back_wing` | The front wing (a gradient) and the back wing (a colour, or `url(#id)` of a gradient of yours) |
 | `trim`, `trim_width` | The front wing's trim |
 | `iris`, `rim`, `ring`, `shine` | The eye: the iris (centre, middle, edge), the dark rim, the lens' ring, the light on the hair |
-| `eyes`, `lid`, `brow` | The look (table below), the colour of the lid and of the brow |
+| `eyes`, `lid`, `brow` | The look (table below), the colour of the lid (`skin`: the face's own gradient, so no disc shows round the eye) and of the brow |
+| `bags` | The colour of the shadows under `tired` eyes |
 | `iris2` | The front eye's iris, for eyes of two colours (`None`: both alike) |
 | `pupil` | The colour of the small light in a `sly` eye |
 | `mole` | A beauty mark, `(x, y)` in the head's frame (`None`: none) |
@@ -147,7 +154,7 @@ Then run `python3 -I make_vocaloid.py` and `sh publish.sh`.
 | `tie`, `band`, `tie_h` | The tail's tie, its band and its height; `tie=None` is a loose tail |
 | `tail_vein` | The colour of a light vein along each tail (`None`: no vein) |
 | `near_use`, `far_use`, `near_note`, `far_note` | Where the tails hang (empty: none) |
-| `ahoge` | The curl on top of the head |
+| `ahoge` | The curl on top of the head: `True` is Teto's; a path in the head's frame is one of your own (Afugo's spikes), drawn under the wings and the head as Teto's is |
 | `mark`, `mark_colour` | The mark on the arm and its colour |
 | `skin` | The face's gradient (light, lighter) in place of the warm one |
 | `hair_path`, `hair_fill` | The hair's outline over the head, in the head's frame, and its fill: Fuddles' band of hair |
@@ -167,7 +174,8 @@ Then run `python3 -I make_vocaloid.py` and `sh publish.sh`.
 | `lens-soft` | The lens under a gently arched lid, calm | Adachi Rei V5 |
 | `lens-cool` | The lens under a flat lid half way down | Adachi Rei V6 |
 | `sly` | Half shut under a heavy lid, a dark iris turned aside with a small light at its middle (`pupil`), a sliver of white at the outer corner, two tired lines under it | Yi Xi SV2 |
-| `caret` | Shut in a smile, each eye a `^` standing upright as it is typed (Yi Xi's `^q^`) | Yi Xi SV |
+| `caret` | Shut in a smile, each eye a `^` standing upright as it is typed (Yi Xi's `^q^`) | Yi Xi SV, Aogo |
+| `tired` | Open under a heavy lid that sags to the outer corner, a dull small glint, a crescent of shadow under each eye (`bags`) | Afugo |
 
 A new look goes into `eyes_svg()` in `make_vocaloid.py`. Head accessories (beret, goggles, antennas) go into
 `head_extras`, drawn in the head's frame: see Defoko's beret and GUMI's goggles. Circuit traces like Fuddles' are

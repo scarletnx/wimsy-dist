@@ -43,12 +43,15 @@ def glasses():
     return "".join(out)
 
 
-def clip():
-    """the black clip in her hair, over the top of the head, AO on it in white"""
-    return (f'''  <!-- the black clip in her hair, AO on it -->
-  <g transform="{HEAD} translate(150,-44) rotate(-10)">
-    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#1C1C20" stroke="#FFFFFF" stroke-width="3"/>
-    {letters("AO", -10, -6.5, 13, "#FFFFFF")}
+def clip(text="AO", fill="#1C1C20", ink="#FFFFFF", place="translate(150,-44) rotate(-10)",
+         note="the black clip in her hair, AO on it"):
+    """the clip in her hair with the letters of her designation: Aogo's black with AO in white, over the top of the
+    head; her sisters' (make_afugo.py...) carry theirs, in their colours, where their hair has room (place, in the
+    head's frame)"""
+    return (f'''  <!-- {note} -->
+  <g transform="{HEAD} {place}">
+    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="{fill}" stroke="#FFFFFF" stroke-width="3"/>
+    {letters(text, -10, -6.5, 13, ink)}
   </g>
 ''')
 

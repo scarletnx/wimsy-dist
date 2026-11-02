@@ -48,10 +48,14 @@ i=0
 while [ $i -lt $row ]; do rows="$rows $T/row$i.sheet"; i=$((i + 1)); done
 # shellcheck disable=SC2086
 magick $rows -append "$D/wimsy-versions.png"
-# Aogo (make_aogo.py), the AogoWimsy bot's: her SVG and PNG, not on the sheets either
-cp "$S/out/wimsy-aogo.svg" "$D/wimsy-aogo.svg"
-xmllint --noout "$D/wimsy-aogo.svg"
-rsvg-convert -w 1024 -h 1024 "$D/wimsy-aogo.svg" -o "$D/wimsy-aogo.png"
+# Aogo (make_aogo.py), the AogoWimsy bot's, and her sisters, DraVee's other agents (make_afugo.py): each SVG and PNG,
+# not on the sheets either: they are not singers
+for f in aogo afugo; do
+    cp "$S/out/wimsy-$f.svg" "$D/wimsy-$f.svg"
+    xmllint --noout "$D/wimsy-$f.svg"
+    if grep -q '<image\|href="http' "$D/wimsy-$f.svg"; then echo "publish.sh: wimsy-$f.svg embeds or links something" >&2; exit 1; fi
+    rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
+done
 # Accord (make_accord.py): its SVG and PNG, and the AccordWimsy bot's avatar, the drawing on Accord's disc ringed by
 # its rope; not on the sheets: Accord is a forge, not a singer
 for f in wimsy-accord accordwimsy-avatar; do
