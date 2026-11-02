@@ -22,23 +22,24 @@ make_versions.GLYPHS.setdefault("5", "M 8,0 L 1,0 L 0,7 Q 3,5.5 5,6 Q 8,7 8,11 Q
 FRAME = "#3A3A40"  # the glasses' frames
 
 
-def glasses():
-    """a frame round each eye, in the eyes' own tilt, the bridge between them and the arm toward the back"""
+def glasses(half=29, top=-23, height=44, rx=13, width=4.5):
+    """a frame round each eye, in the eyes' own tilt, the bridge between them and the arm toward the back; the
+    emojis (make_aogo_emoji.py) take larger frames in a heavier line, which still read at 32 px"""
     out = ["  <!-- her glasses: a frame round each eye, the bridge, the arm toward the back of the head -->\n"]
     centres = [face_centre(i) for i in range(2)]
     t = math.radians(-26.68)
     for cx, cy in centres:
         out.append(f'  <g transform="translate({cx:.2f},{cy:.2f}) rotate(-26.68)">\n'
-                   f'    <rect x="-29" y="-23" width="58" height="44" rx="13" fill="#FFFFFF" fill-opacity="0.22" '
-                   f'stroke="{FRAME}" stroke-width="4.5"/>\n  </g>\n')
+                   f'    <rect x="{-half:g}" y="{top:g}" width="{2 * half:g}" height="{height:g}" rx="{rx:g}" '
+                   f'fill="#FFFFFF" fill-opacity="0.22" stroke="{FRAME}" stroke-width="{width:g}"/>\n  </g>\n')
 
     def at(i, x, y):  # a point of eye i's frame, on the page
         cx, cy = centres[i]
         return cx + x * math.cos(t) - y * math.sin(t), cy + x * math.sin(t) + y * math.cos(t)
 
-    (ax, ay), (bx, by) = at(0, 29, -7), at(1, -29, -7)
-    (sx, sy), (ex, ey) = at(0, -29, -9), at(0, -58, -15)
-    out.append(f'  <path fill="none" stroke="{FRAME}" stroke-width="4.5" stroke-linecap="round" '
+    (ax, ay), (bx, by) = at(0, half, -7), at(1, -half, -7)
+    (sx, sy), (ex, ey) = at(0, -half, -9), at(0, -half - 29, -15)
+    out.append(f'  <path fill="none" stroke="{FRAME}" stroke-width="{width:g}" stroke-linecap="round" '
                f'd="M {ax:.2f},{ay:.2f} Q {(ax + bx) / 2:.2f},{(ay + by) / 2 - 7:.2f} {bx:.2f},{by:.2f} '
                f'M {sx:.2f},{sy:.2f} L {ex:.2f},{ey:.2f}"/>\n')
     return "".join(out)

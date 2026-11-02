@@ -23,6 +23,21 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   (drawn by Kedr, Kedr_bit on X): long coral hair, glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg`
   and `.png` here, as publish.sh makes the others, and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing
   at 74% on a dark disc, so Discord's round crop keeps it whole. Not on the sheets: she is not a singer.
+- `tools/make_aogo_emoji.py`: the reactions the AogoWimsy bot puts on Discord messages, one emoji for each meaning,
+  `emoji/wimsyaogo_<name>.svg` and its `.png` at 128 px:
+
+  | Name | Meaning | Her face | The sign |
+  | --- | --- | --- | --- |
+  | `wimsyaogo_eyes` | seen, on it | eyes wide open, glancing up at the message, a small smile | two eyes glancing up, on dark grey |
+  | `wimsyaogo_thumbsup` | agreed | a wink, a wide smile | a thumb up, white on blue |
+  | `wimsyaogo_done` | done | shut in a smile, each eye a `^`, an open grin | a white check on green |
+  | `wimsyaogo_no` | cannot | squeezed shut, `>` `<`, a wavy mouth, a drop of sweat | a white X on red |
+
+  Each is the whole drawing, so a reaction row still shows Wimsy's five leaves in Aogo's coral, with the sign in a disc
+  ringed in white in the drawing's empty lower right, large enough to read at a reaction's 16 to 22 px. Her glasses
+  are larger and in a thicker line than the drawing's, and so are her eyes: the drawing's lines fade into the skin
+  below 48 px. The face reads from 48 px; at 32 px it shows as her glasses, the sign as itself. `publish.sh` refuses
+  one over Discord's 256 KB. Not on the sheets: they are emojis.
 - `tools/make_afugo.py`: Afugo (AF51, DraVee's Fable agent), Aogo's sister, from her drawing on accord.dravee.dev (drawn
   by Kedr, Kedr_bit on X): long messy rust hair with two spikes on top, tired eyes over grey lilac shadows, a yawn, a
   black clip with AF, 51 on the sleeve. The rust is her drawing's, redder and darker than Aogo's coral, and the lilac
@@ -60,6 +75,7 @@ font (only for the names on the sheets).
     python3 -I make_vocaloid.py
     python3 -I make_platforms.py
     python3 -I make_aogo.py
+    python3 -I make_aogo_emoji.py
     python3 -I make_afugo.py
     python3 -I make_asugo.py
     python3 -I make_xuji.py

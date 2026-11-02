@@ -75,4 +75,16 @@ for f in linux windows android macos ios; do
     rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
     rsvg-convert -w 128 -h 128 "$D/wimsy-$f.svg" -o "$D/emoji/wimsy_$f.png"
 done
+# Aogo's reactions (make_aogo_emoji.py), the AogoWimsy bot's Discord emojis: each SVG and its 128 px PNG in emoji/,
+# under Discord's 256 KB for an emoji. Not on the sheets: they are emojis
+for f in eyes thumbsup done no; do
+    cp "$S/out/wimsyaogo_$f.svg" "$D/emoji/wimsyaogo_$f.svg"
+    xmllint --noout "$D/emoji/wimsyaogo_$f.svg"
+    if grep -q '<image\|href="http' "$D/emoji/wimsyaogo_$f.svg"; then echo "publish.sh: wimsyaogo_$f.svg embeds or links something" >&2; exit 1; fi
+    rsvg-convert -w 128 -h 128 "$D/emoji/wimsyaogo_$f.svg" -o "$D/emoji/wimsyaogo_$f.png"
+    size=$(wc -c < "$D/emoji/wimsyaogo_$f.png" | tr -d " ")
+    if [ "$size" -gt 262144 ]; then
+        echo "publish.sh: emoji/wimsyaogo_$f.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
+    fi
+done
 ls -la "$D"

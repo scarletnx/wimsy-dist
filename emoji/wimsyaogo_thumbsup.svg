@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Aogo's long coral hair, glasses and a clip and colours.
+     The leaves keep Wimsy's own shapes; colours from Aogo's drawing on accord.dravee.dev, drawn by Kedr (Kedr_bit on X); fan art. -->
+<!-- wimsyaogo_thumbsup, a Discord emoji: the AogoWimsy bot's reaction for agreed -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>wimsyaogo_thumbsup: Wimsy as Aogo, the AogoWimsy bot's reaction for agreed</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (long coral hair, glasses and a clip, Aogo's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Aogo: long coral hair and its shade, a white top with coral trim, light grey sleeves with 55 in coral, glasses, a black clip in the hair with AO in white -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F59A6C"/>
+      <stop offset="1" stop-color="#DD6A3C"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F08A5A"/>
+      <stop offset="1" stop-color="#CC5A2E"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D96A3E"/>
+      <stop offset="1" stop-color="#A9471F"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DD6A3C"/>
+      <stop offset="1" stop-color="#B5502A"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C25A31"/>
+      <stop offset="1" stop-color="#8E3D1C"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E2E0E8"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F7D9CE"/>
+      <stop offset="1" stop-color="#FDEDE6"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#F5A07A"/>
+      <stop offset="0.7" stop-color="#D9653B"/>
+      <stop offset="1" stop-color="#8E3D1C"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her long hair, loose: the head's back and the two leaves below, no tail -->
+  </defs>
+
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="#CFCDD6" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's coral trim along the front wing -->
+  <path fill="none" stroke="#E0703F" stroke-width="6" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the mark on her arm -->
+  <g transform="rotate(-8 192 100) translate(186,92)" stroke="#D9653B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path transform="translate(0,0)" d="M 8,0 L 1,0 L 0,7 Q 3,5.5 5,6 Q 8,7 8,11 Q 8,16 4,16 Q 1,16 0,13"/>
+    <path transform="translate(12,0)" d="M 8,0 L 1,0 L 0,7 Q 3,5.5 5,6 Q 8,7 8,11 Q 8,16 4,16 Q 1,16 0,13"/>
+  </g>
+  <!-- the two leaves below, in the hair's coral -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#FFD2BC" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- her glasses: a frame round each eye, the bridge, the arm toward the back of the head -->
+  <g transform="translate(356.06,269.04) rotate(-26.68)">
+    <rect x="-32" y="-27" width="64" height="52" rx="15" fill="#FFFFFF" fill-opacity="0.22" stroke="#3A3A40" stroke-width="8"/>
+  </g>
+  <g transform="translate(424.81,239.22) rotate(-26.68)">
+    <rect x="-32" y="-27" width="64" height="52" rx="15" fill="#FFFFFF" fill-opacity="0.22" stroke="#3A3A40" stroke-width="8"/>
+  </g>
+  <path fill="none" stroke="#3A3A40" stroke-width="8" stroke-linecap="round" d="M 381.51,248.41 Q 387.29,240.88 393.07,247.34 M 323.42,275.36 L 294.82,283.02"/>
+  <!-- the black clip in her hair, AO on it -->
+  <g transform="translate(217.8,336.7) rotate(-26.68) translate(150,-44) rotate(-10)">
+    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#1C1C20" stroke="#FFFFFF" stroke-width="3"/>
+    <g stroke="#FFFFFF" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-10.00,-6.5) scale(0.812)" d="M 0,16 L 4,0 L 8,16 M 1.6,10 L 6.4,10"/><path transform="translate(-0.25,-6.5) scale(0.812)" d="M 4,0 A 5,8 0 1 1 4,16 A 5,8 0 1 1 4,0"/></g>
+  </g>
+
+  <!-- her face, agreed: a wink, a wide smile -->
+  <circle cx="356.06" cy="269.04" r="19.5" fill="#3A2A26"/>
+  <circle cx="356.06" cy="269.04" r="14.5" fill="url(#iris)"/>
+  <circle cx="351.56" cy="263.54" r="6.5" fill="#FFFFFF"/>
+  <circle cx="361.56" cy="274.04" r="2.8" fill="#FFFFFF" fill-opacity="0.85"/>
+  <path transform="translate(424.81,239.22)" stroke="#3A2A26" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M -15,8 L 0,-9 L 15,8"/>
+  <g transform="translate(217.8,336.7) rotate(-26.68)">
+    <path d="M 179,35 Q 192,49 205,35" fill="none" stroke="#3A2A26" stroke-width="5.5" stroke-linecap="round"/>
+  </g>
+  <!-- the sign: a thumb up, white on blue -->
+  <g transform="translate(404,408)">
+    <circle r="97" fill="#5865F2" stroke="#FFFFFF" stroke-width="9"/>
+    <g transform="scale(0.97)"><g transform="translate(4,6)"><rect x="-64" y="-8" width="24" height="66" rx="5" fill="#FFFFFF"/><path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" d="M -34,-4 L -16,-36 C -12,-46 -12,-58 -6,-66 C 0,-75 14,-72 14,-58 C 14,-44 9,-30 6,-18 L 42,-18 C 55,-18 55,0 42,0 C 53,0 53,18 40,18 C 51,18 51,36 38,36 C 48,36 48,54 35,54 L -34,56 Z"/><path fill="none" stroke="#5865F2" stroke-width="4.5" stroke-linecap="round" d="M 12,0 L 40,0 M 12,18 L 38,18 M 12,36 L 36,36"/></g></g>
+  </g>
+</svg>
