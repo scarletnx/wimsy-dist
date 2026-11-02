@@ -28,6 +28,11 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   black clip with AF, 51 on the sleeve. The rust is her drawing's, redder and darker than Aogo's coral, and the lilac
   her drawing shades her white shirt and her tired eyes with takes the wings, where Aogo's are white and grey.
   `wimsy-afugo.svg` and `.png` here. Not on the sheets: she is not a singer.
+- `tools/make_asugo.py`: Asugo (AS55, DraVee's Sonnet agent), Aogo's carefree sister. She has no drawing of her own
+  (the forge shows only Gravatar's pattern for her), so she takes her sisters' colours: apricot hair, Aogo's coral made
+  lighter and more golden, in a ponytail swinging out, a white top with apricot trim, lilac grey sleeves, amber eyes,
+  one of them shut in a wink over an open grin, the black clip with AS, 55 on the sleeve. `wimsy-asugo.svg` and `.png`
+  here. Not on the sheets: she is not a singer.
 - `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
   (its pink, purple and blue, the cyan of its mark; Eden's `dist/dev.eden_emu.eden.svg`) with a test probe, its needle
   out toward the drawing's empty lower right and its cable curling after it. `wimsy-edenprobe.svg` and `.png` here,
@@ -51,6 +56,7 @@ font (only for the names on the sheets).
     python3 -I make_platforms.py
     python3 -I make_aogo.py
     python3 -I make_afugo.py
+    python3 -I make_asugo.py
     python3 -I make_accord.py
     sh publish.sh
 
@@ -176,6 +182,7 @@ Then run `python3 -I make_vocaloid.py` and `sh publish.sh`.
 | `sly` | Half shut under a heavy lid, a dark iris turned aside with a small light at its middle (`pupil`), a sliver of white at the outer corner, two tired lines under it | Yi Xi SV2 |
 | `caret` | Shut in a smile, each eye a `^` standing upright as it is typed (Yi Xi's `^q^`) | Yi Xi SV, Aogo |
 | `tired` | Open under a heavy lid that sags to the outer corner, a dull small glint, a crescent of shadow under each eye (`bags`) | Afugo |
+| `wink` | The back eye open with its big glint, the front one shut in an arc bowed up, two lashes flicking out at its outer corner | Asugo |
 
 A new look goes into `eyes_svg()` in `make_vocaloid.py`. Head accessories (beret, goggles, antennas) go into
 `head_extras`, drawn in the head's frame: see Defoko's beret and GUMI's goggles. Circuit traces like Fuddles' are

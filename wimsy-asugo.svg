@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Asugo's apricot ponytail and a clip and colours.
+     The leaves keep Wimsy's own shapes; her sisters' colours, from Kedr's drawings of them (Kedr_bit on X), as she has no drawing: Aogo's coral made lighter and more golden; fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>Wimsy with Asugo's apricot ponytail and a clip</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (apricot ponytail and a clip, Asugo's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Asugo: apricot hair and its shade in a ponytail swinging out, a white top with apricot trim, lilac grey sleeves with 55, amber eyes, a wink, a grin, a black clip with AS in white -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDBE86"/>
+      <stop offset="1" stop-color="#F1924F"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAB073"/>
+      <stop offset="1" stop-color="#E2803C"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8914A"/>
+      <stop offset="1" stop-color="#B8622A"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1924F"/>
+      <stop offset="1" stop-color="#C86E30"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D27A3A"/>
+      <stop offset="1" stop-color="#9A5222"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#ECE6EF"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F7D9CE"/>
+      <stop offset="1" stop-color="#FDEDE6"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#FFC98E"/>
+      <stop offset="0.7" stop-color="#E58B3A"/>
+      <stop offset="1" stop-color="#8A4716"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her ponytail, swinging out: one leaf, tied in a black scrunchie -->
+    <g id="drill">
+      <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round" d="M -22,6 Q -42,120 2,236 Q 34,118 22,6 Q 0,-6 -22,6 Z"/>
+      <rect x="-30" y="-9" width="60" height="18" rx="9" fill="#1C1C20" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="-23" y="-2" width="46" height="4" rx="2" fill="#F0904A"/>
+    </g>
+  </defs>
+
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="#B9ACC8" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's apricot trim along the front wing -->
+  <path fill="none" stroke="#F0904A" stroke-width="6" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the mark on her arm -->
+  <g transform="rotate(-8 192 100) translate(186,92)" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path transform="translate(0,0)" d="M 8,0 L 1,0 L 0,7 Q 3,5.5 5,6 Q 8,7 8,11 Q 8,16 4,16 Q 1,16 0,13"/>
+    <path transform="translate(12,0)" d="M 8,0 L 1,0 L 0,7 Q 3,5.5 5,6 Q 8,7 8,11 Q 8,16 4,16 Q 1,16 0,13"/>
+  </g>
+  <!-- the two leaves below, in the hair's apricot -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#FFE2C6" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- her mouth, open in a carefree grin -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)" stroke-linejoin="round">
+    <path fill="#6A2A26" stroke="#3A2A26" stroke-width="2.5" d="M 179,33 L 205,33 Q 205,51 192,51 Q 179,51 179,33 Z"/>
+    <path fill="#F08A8A" d="M 184.5,46 Q 192,39.5 199.5,46 Q 197,49.5 192,49.5 Q 187,49.5 184.5,46 Z"/>
+  </g>
+  <!-- the black clip in her hair, AS on it -->
+  <g transform="translate(217.8,336.7) rotate(-26.68) translate(150,-44) rotate(-10)">
+    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#1C1C20" stroke="#FFFFFF" stroke-width="3"/>
+    <g stroke="#FFFFFF" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-10.00,-6.5) scale(0.812)" d="M 0,16 L 4,0 L 8,16 M 1.6,10 L 6.4,10"/><path transform="translate(-0.25,-6.5) scale(0.812)" d="M 8,2 Q 6.5,0 4,0 Q 0,0 0,4 Q 0,7.5 4,8 Q 8,8.5 8,12 Q 8,16 4,16 Q 1.5,16 0,14"/></g>
+  </g>
+  <!-- the eyes, where Wimsy has them, Asugo's: amber, one of them shut in a wink -->
+  <g transform="rotate(24.165289)">
+    <circle cx="434.99091" cy="99.701668" r="23.114985" fill="#3A2A26"/>
+    <circle cx="434.99" cy="96.20" r="17.5" fill="url(#iris)"/>
+    <circle cx="430.39" cy="89.40" r="7" fill="#FFFFFF"/>
+    <circle cx="440.39" cy="103.60" r="3" fill="#FFFFFF" fill-opacity="0.85"/>
+  </g>
+  <clipPath id="eye-clip"><circle r="24.5"/></clipPath>
+  <g transform="translate(424.81,239.22) rotate(-26.68)" stroke-linecap="round">
+    <path stroke="#3A2A26" stroke-width="5.5" fill="none" d="M -17,4 Q 0,-14 17,4"/>
+    <path stroke="#3A2A26" stroke-width="3.2" fill="none" d="M 12,-2 L 18,-10 M 17,3 L 26,-1"/>
+  </g>
+
+  <!-- her ponytail, in front, swung out -->
+  <use xlink:href="#drill" transform="translate(322,318) rotate(-28) scale(0.86,0.48)"/>
+</svg>

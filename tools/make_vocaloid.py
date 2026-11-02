@@ -60,7 +60,8 @@ def eyes_svg(p):
     gently arched lid; lens-cool: the lens under a flat lid half way down; sly: a dark iris with a small light at its
     middle (pupil), turned aside under a heavy lid that droops to the outer corner, the white showing at that corner,
     two short tired lines under it; caret: shut in a smile, each eye a ^ (Yi Xi's ^q^); tired: open under a heavy lid
-    that sags to the outer corner, a dull small glint, a dark crescent under each eye (bags)"""
+    that sags to the outer corner, a dull small glint, a dark crescent under each eye (bags); wink: the back eye open
+    with its big glint, the front one shut in an arc with a flick of lashes at its outer corner"""
     look = p.get("eyes", "round")
     lens = look.startswith("lens")
     # the eyes turned aside, toward the back of the head, for the tsundere's look away
@@ -84,6 +85,8 @@ def eyes_svg(p):
     out.append(f'  <g transform="rotate({EYE_TURN})">\n')
     for i, (x, y) in enumerate(EYES):
         if look == "caret":  # shut: no eye to draw, its ^ comes below
+            continue
+        if look == "wink" and i == 1:  # shut: its arc comes below
             continue
         ix, iy = x + sx, y - 3.5 + sy
         iris = "iris2" if p["iris2"] and i == 1 else "iris"
@@ -147,6 +150,10 @@ def eyes_svg(p):
                      f'd="M -30,-40 L 30,-40 L 30,{right} L 23,{right} Q 0,-10 -23,{left} L -30,{left} Z"/>\n')
             g.append(f'    <path stroke="{p["rim"]}" stroke-width="4.5" fill="none" '
                      f'd="M -23,{left} Q 0,-10 23,{right}"/>\n')
+        elif look == "wink" and i == 1:  # shut in an arc bowed up, the lashes flicking out at the outer corner
+            g.append(f'    <path stroke="{p["rim"]}" stroke-width="5.5" fill="none" d="M -17,4 Q 0,-14 17,4"/>\n')
+            g.append(f'    <path stroke="{p["rim"]}" stroke-width="3.2" fill="none" '
+                     'd="M 12,-2 L 18,-10 M 17,3 L 26,-1"/>\n')
         elif look == "caret":  # a ^ standing upright as it is typed, whatever the head's tilt: shut in a smile
             out.append(f'  <path transform="translate({cx:.2f},{cy:.2f})" stroke="{p["rim"]}" stroke-width="5.5" '
                        'stroke-linejoin="round" stroke-linecap="round" fill="none" d="M -15,7 L 0,-9 L 15,7"/>\n')
