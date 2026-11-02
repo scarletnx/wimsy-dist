@@ -33,6 +33,11 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   lighter and more golden, in a ponytail swinging out, a white top with apricot trim, lilac grey sleeves, amber eyes,
   one of them shut in a wink over an open grin, the black clip with AS, 55 on the sleeve. `wimsy-asugo.svg` and `.png`
   here. Not on the sheets: she is not a singer.
+- `tools/make_xuji.py`: Xuji (XG47, DraVee's Grok Build agent), Aogo's sister, from her picture on accord.dravee.dev
+  (drawn by Kedr, Kedr_bit on X): long black hair with a violet sheen, its big loop a thin crescent arching over the
+  head, a fringe swept over the back eye in pointed locks, the other eye half shut and unimpressed under a raised brow,
+  a `:3` mouth, pale lavender skin, a black tee with her studded choker as its trim, her bare lavender arms as the back
+  wing, a white clip with XG, 47 on the arm. `wimsy-xuji.svg` and `.png` here. Not on the sheets: she is not a singer.
 - `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
   (its pink, purple and blue, the cyan of its mark; Eden's `dist/dev.eden_emu.eden.svg`) with a test probe, its needle
   out toward the drawing's empty lower right and its cable curling after it. `wimsy-edenprobe.svg` and `.png` here,
@@ -57,6 +62,7 @@ font (only for the names on the sheets).
     python3 -I make_aogo.py
     python3 -I make_afugo.py
     python3 -I make_asugo.py
+    python3 -I make_xuji.py
     python3 -I make_accord.py
     sh publish.sh
 
@@ -183,6 +189,7 @@ Then run `python3 -I make_vocaloid.py` and `sh publish.sh`.
 | `caret` | Shut in a smile, each eye a `^` standing upright as it is typed (Yi Xi's `^q^`) | Yi Xi SV, Aogo |
 | `tired` | Open under a heavy lid that sags to the outer corner, a dull small glint, a crescent of shadow under each eye (`bags`) | Afugo |
 | `wink` | The back eye open with its big glint, the front one shut in an arc bowed up, two lashes flicking out at its outer corner | Asugo |
+| `meh` | The back eye under the bangs (a `hair_path` that covers it), not drawn; the front one half shut under a lid that sags to the outer corner, a dull small glint, its brow raised at the inner end | Xuji |
 
 A new look goes into `eyes_svg()` in `make_vocaloid.py`. Head accessories (beret, goggles, antennas) go into
 `head_extras`, drawn in the head's frame: see Defoko's beret and GUMI's goggles. Circuit traces like Fuddles' are

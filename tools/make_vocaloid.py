@@ -61,7 +61,9 @@ def eyes_svg(p):
     middle (pupil), turned aside under a heavy lid that droops to the outer corner, the white showing at that corner,
     two short tired lines under it; caret: shut in a smile, each eye a ^ (Yi Xi's ^q^); tired: open under a heavy lid
     that sags to the outer corner, a dull small glint, a dark crescent under each eye (bags); wink: the back eye open
-    with its big glint, the front one shut in an arc with a flick of lashes at its outer corner"""
+    with its big glint, the front one shut in an arc with a flick of lashes at its outer corner; meh: the back eye under
+    the bangs (a hair_path that covers it), not drawn, the front one half shut under a lid that sags to the outer
+    corner, a dull small glint, its brow raised at the inner end"""
     look = p.get("eyes", "round")
     lens = look.startswith("lens")
     # the eyes turned aside, toward the back of the head, for the tsundere's look away
@@ -86,7 +88,7 @@ def eyes_svg(p):
     for i, (x, y) in enumerate(EYES):
         if look == "caret":  # shut: no eye to draw, its ^ comes below
             continue
-        if look == "wink" and i == 1:  # shut: its arc comes below
+        if (look, i) in (("wink", 1), ("meh", 0)):  # shut, its arc comes below; or under the bangs
             continue
         ix, iy = x + sx, y - 3.5 + sy
         iris = "iris2" if p["iris2"] and i == 1 else "iris"
@@ -100,7 +102,7 @@ def eyes_svg(p):
             continue
         if look == "sly":  # no glint: the small light at the middle comes with the lid, below it
             continue
-        dull = look in ("deadpan", "tired")  # no big glint: the lid covers where it would be
+        dull = look in ("deadpan", "tired", "meh")  # no big glint: the lid covers where it would be
         if not dull:
             out.append(f'    <circle cx="{x - 4.6 + sx:.2f}" cy="{y - 10.3 + sy:.2f}" r="7" fill="#FFFFFF"/>\n')
         out.append(f'    <circle cx="{x + 5.4 + sx:.2f}" cy="{y + 3.9 + sy:.2f}" r="3" fill="#FFFFFF" '
@@ -154,6 +156,11 @@ def eyes_svg(p):
             g.append(f'    <path stroke="{p["rim"]}" stroke-width="5.5" fill="none" d="M -17,4 Q 0,-14 17,4"/>\n')
             g.append(f'    <path stroke="{p["rim"]}" stroke-width="3.2" fill="none" '
                      'd="M 12,-2 L 18,-10 M 17,3 L 26,-1"/>\n')
+        elif look == "meh" and i == 1:  # half shut, sagging away from the hidden eye; the brow up at the inner end
+            g.append(f'    <path clip-path="url(#eye-clip)" fill="{lids[i]}" '
+                     'd="M -30,-40 L 30,-40 L 30,1 L 23,1 Q 0,-5 -23,-4 L -30,-4 Z"/>\n')
+            g.append(f'    <path stroke="{p["rim"]}" stroke-width="4.5" fill="none" d="M -23,-4 Q 0,-5 23,1"/>\n')
+            g.append(f'    <path stroke="{p["brow"]}" stroke-width="3.2" fill="none" d="M -12,-34 Q 1,-31 12,-21"/>\n')
         elif look == "caret":  # a ^ standing upright as it is typed, whatever the head's tilt: shut in a smile
             out.append(f'  <path transform="translate({cx:.2f},{cy:.2f})" stroke="{p["rim"]}" stroke-width="5.5" '
                        'stroke-linejoin="round" stroke-linecap="round" fill="none" d="M -15,7 L 0,-9 L 15,7"/>\n')

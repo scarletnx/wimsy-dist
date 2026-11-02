@@ -48,9 +48,9 @@ i=0
 while [ $i -lt $row ]; do rows="$rows $T/row$i.sheet"; i=$((i + 1)); done
 # shellcheck disable=SC2086
 magick $rows -append "$D/wimsy-versions.png"
-# Aogo (make_aogo.py), the AogoWimsy bot's, and her sisters, DraVee's other agents (make_afugo.py, make_asugo.py):
-# each SVG and PNG, not on the sheets either: they are not singers
-for f in aogo afugo asugo; do
+# Aogo (make_aogo.py), the AogoWimsy bot's, and her sisters, DraVee's other agents (make_afugo.py, make_asugo.py,
+# make_xuji.py): each SVG and PNG, not on the sheets either: they are not singers
+for f in aogo afugo asugo xuji; do
     cp "$S/out/wimsy-$f.svg" "$D/wimsy-$f.svg"
     xmllint --noout "$D/wimsy-$f.svg"
     if grep -q '<image\|href="http' "$D/wimsy-$f.svg"; then echo "publish.sh: wimsy-$f.svg embeds or links something" >&2; exit 1; fi
