@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """make_aogo.py: Wimsy as Aogo (AO55, the agent of DraVee's workspaces), the avatar of the AogoWimsy bot, from the
-drawing Aogo has on accord.dravee.dev: long coral hair, glasses, a black clip in the hair, a white top with coral at
-the neck, eyes shut in a smile. Made with make_vocaloid's pieces, as the other designs are; writes
-out/wimsy-aogo.svg. The clip carries AO, not the vendor's mark the forge drawing has: the bot is not the vendor's."""
+drawing Aogo has on accord.dravee.dev (drawn by Kedr, Kedr_bit on X): long coral hair, glasses, a black clip in the
+hair, a white top with coral at the neck, eyes shut in a smile. Made with make_vocaloid's pieces, as the other
+designs are; writes out/wimsy-aogo.svg. The clip carries AO, not the vendor's mark the forge drawing has: the bot is
+not the vendor's."""
 import math
 import os
 import sys
@@ -59,7 +60,7 @@ def clip(text="AO", fill="#1C1C20", ink="#FFFFFF", place="translate(150,-44) rot
 AOGO = character(
     name="Aogo", who="Aogo", who_full="Aogo", hair_word="long coral hair, glasses and a clip",
     hair_colour="coral", trim_word="coral", eyes_word="Aogo's: shut in a smile behind her glasses, each a ^",
-    source="colours from Aogo's drawing on accord.dravee.dev",
+    source="colours from Aogo's drawing on accord.dravee.dev, drawn by Kedr (Kedr_bit on X)",
     palette_note="Aogo: long coral hair and its shade, a white top with coral trim, light grey sleeves with 55 in "
                  "coral, glasses, a black clip in the hair with AO in white",
     hair=("#F59A6C", "#DD6A3C"), tail=("#F08A5A", "#CC5A2E"), tail_dark=("#D96A3E", "#A9471F"),

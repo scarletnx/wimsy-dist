@@ -19,10 +19,10 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
   grey, a blue front), the last two with the apple's leaf over the head. `wimsy-<system>.svg` and `.png` here, and
   `emoji/wimsy_<system>.png` at 128 px: the ReiWimsy application's emojis, beside each download in its cards. Not on
   the sheets: they are not singers.
-- `tools/make_aogo.py`: Aogo (AO55, DraVee's agent), from her drawing on accord.dravee.dev: long coral hair,
-  glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg` and `.png` here, as publish.sh makes the others,
-  and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing at 74% on a dark disc, so Discord's round crop
-  keeps it whole. Not on the sheets: she is not a singer.
+- `tools/make_aogo.py`: Aogo (AO55, DraVee's agent), from her drawing on accord.dravee.dev
+  (drawn by Kedr, Kedr_bit on X): long coral hair, glasses, a black clip with AO, 55 on the sleeve. `wimsy-aogo.svg`
+  and `.png` here, as publish.sh makes the others, and `aogowimsy-avatar.png`, the AogoWimsy bot's avatar: the drawing
+  at 74% on a dark disc, so Discord's round crop keeps it whole. Not on the sheets: she is not a singer.
 - `tools/make_afugo.py`: Afugo (AF51, DraVee's Fable agent), Aogo's sister, from her drawing on accord.dravee.dev (drawn
   by Kedr, Kedr_bit on X): long messy rust hair with two spikes on top, tired eyes over grey lilac shadows, a yawn, a
   black clip with AF, 51 on the sleeve. The rust is her drawing's, redder and darker than Aogo's coral, and the lilac
@@ -220,6 +220,9 @@ The drawings, the generators and their PNGs are GPL-3.0-or-later, as Wimsy is (`
 The colours were read from Yi Xi's art: the BUTCHER VANITY music video (FLAVOR FOLEY, drawn by ricedeity) and
 VIMALION PROJECT's designs (vimalion.pro/yixi), which they let anyone use with credit. Those images are their owners'
 and stay out of this repo: put them in `ref/`, which git leaves out, to read the colours again.
+
+Aogo, Afugo and Xuji come from their pictures on accord.dravee.dev, drawn by Kedr (Kedr_bit on X); Asugo, who has
+none, takes her sisters' colours. Those pictures are Kedr's and stay out of this repo too, in `ref/` beside the others.
 
 ## Checking before sending
 
