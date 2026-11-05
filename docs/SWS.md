@@ -74,7 +74,7 @@ Each theme has Wimsy in its colours: Liz's five leaves (GPL-3.0-or-later; every 
 
 | Theme | Its Wimsy |
 |---|---|
-| Sepia | `themes/wimsy-sepia.svg`: the leaves in ink and warm greys, the head ochre |
+| Sepia | `themes/wimsy-sepia.svg`: AccordWimsy (`dist/wimsy-accord.svg`), as she is drawn |
 | Wimsy | ScarletNX's `dist/wimsy.svg` itself |
 | Fuddles | ScarletNX's `dist/splash/wimsy-fuddles.svg` |
 | Default | `themes/wimsy-default.svg`: the leaves on a 32 by 32 grid in an early PC's colours |
