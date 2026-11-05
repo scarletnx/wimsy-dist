@@ -155,16 +155,11 @@ bad = "#ff0000"          # [colors] failure
 bad-fill = "#ff0000"
 on-bad = "bg"
 
-# Each theme's Wimsy (wimsys.py): Liz's five leaves in the theme's colours. Wimsy's own is ScarletNX's dist/wimsy.svg,
-# Fuddles' its dist/splash/wimsy-fuddles.svg; Default's is drawn on a 32 by 32 grid of an early PC's 16 colours.
+# Each theme's Wimsy (wimsys.py): a drawing of this repository as it is, or Liz's five leaves in the theme's colours.
+# Wimsy's own is ScarletNX's dist/wimsy.svg, Fuddles' its dist/splash/wimsy-fuddles.svg; Sepia's is AccordWimsy;
+# Default's is drawn on a 32 by 32 grid of an early PC's 16 colours.
 [sepia.wimsy]
-back = "#45413a"
-front = "#6f6b5e"
-lower = "#8a8676"
-head = "#8a6a2a"
-outline = "#dad6be"
-eye = "#141416"
-shine = "#e6e4dc"
+drawing = "dist/wimsy-accord.svg"   # Sepia's Wimsy is AccordWimsy, as she is drawn
 
 [default.wimsy]
 grid = 32

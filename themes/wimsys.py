@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Each theme's Wimsy: Liz's five leaves (ScarletNX's dist/wimsy.svg) in the colours palettes.toml gives a theme
-under [<theme>.wimsy]. A theme with a grid gets them as pixels on that grid (Default's: 32 by 32, an early PC's
+"""Each theme's Wimsy: a drawing of this repository as it is ([<theme>.wimsy] drawing), or Liz's five leaves
+(ScarletNX's dist/wimsy.svg) in the colours palettes.toml gives a theme under [<theme>.wimsy]. A theme with a grid gets them as pixels on that grid (Default's: 32 by 32, an early PC's
 colours, each leaf apart from the next by a cell of the outline's colour). Wimsy's own and Fuddles' are ScarletNX's
 files and are not made here.
 
@@ -128,7 +128,10 @@ def main(argv):
         c = t.get("wimsy")
         if not c:
             continue
-        text = pixels(svg, t["name"], c) if "grid" in c else vector(svg, t["name"], c)
+        if "drawing" in c:  # a drawing of this repository's, as it is
+            text = (HERE.parent / c["drawing"]).read_text()
+        else:
+            text = pixels(svg, t["name"], c) if "grid" in c else vector(svg, t["name"], c)
         path = HERE / f"wimsy-{key}.svg"
         if not path.exists() or path.read_text() != text:
             stale.append(path)
