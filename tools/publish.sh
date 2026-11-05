@@ -1,10 +1,12 @@
 #!/bin/sh
-# publish.sh: the drawings made beside it into the folder above it: each SVG, its PNG (1024, transparent), the sheet of
-# the three Tetos and the sheet of all of them, five a row. Run after make_versions.py and make_vocaloid.py, which
-# write into out/; the Teto UTAU is wimsy-teto.svg itself.
+# publish.sh: the drawings made beside it into dist/, the emojis into emoji/: each SVG, its PNG (1024,
+# transparent), the sheet of the three Tetos and the sheet of all of them, five a row. Run after the make_*.py,
+# which write into out/; the Teto UTAU is wimsy-teto.svg itself.
 set -eu
 S=$(dirname "$(readlink -f "$0")")
-D=$(dirname "$S")
+R=$(dirname "$S")
+D=$R/dist
+E=$R/emoji
 mkdir -p "$D"
 cp "$S/wimsy-teto.svg" "$D/wimsy-teto-utau.svg"
 ALL="teto-utau:Teto UTAU|teto-sv:Teto SV|teto-voicepeak:Teto VOICEPEAK|miku:Miku|neru:Neru|defoko:Defoko|adachi-rei-utau:Adachi Rei UTAU|adachi-rei-v5:Adachi Rei V5|adachi-rei-v6:Adachi Rei V6|gumi:GUMI|fuddles:Fuddles|yi-xi-sv:Yi Xi SV|yi-xi-sv2:Yi Xi SV2"
@@ -67,22 +69,22 @@ rsvg-convert -w 1024 -h 1024 "$D/wimsy-accord.svg" -o "$D/wimsy-accord.png"
 rsvg-convert -w 1024 -h 1024 "$S/out/accordwimsy-avatar.svg" -o "$D/accordwimsy-avatar.png"
 # the systems' Wimsys (make_platforms.py): each SVG, its PNG, and its 128 px emoji, the icon beside each download in
 # ReiWimsy's cards. Not on the sheets: they are not singers
-mkdir -p "$D/emoji"
+mkdir -p "$E"
 for f in linux windows android macos ios; do
     cp "$S/out/wimsy-$f.svg" "$D/wimsy-$f.svg"
     xmllint --noout "$D/wimsy-$f.svg"
     if grep -q '<image\|href="http' "$D/wimsy-$f.svg"; then echo "publish.sh: wimsy-$f.svg embeds or links something" >&2; exit 1; fi
     rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
-    rsvg-convert -w 128 -h 128 "$D/wimsy-$f.svg" -o "$D/emoji/wimsy_$f.png"
+    rsvg-convert -w 128 -h 128 "$D/wimsy-$f.svg" -o "$E/wimsy_$f.png"
 done
 # Aogo's reactions (make_aogo_emoji.py), the AogoWimsy bot's Discord emojis: each SVG and its 128 px PNG in emoji/,
 # under Discord's 256 KB for an emoji. Not on the sheets: they are emojis
 for f in eyes thumbsup done no; do
-    cp "$S/out/wimsyaogo_$f.svg" "$D/emoji/wimsyaogo_$f.svg"
-    xmllint --noout "$D/emoji/wimsyaogo_$f.svg"
-    if grep -q '<image\|href="http' "$D/emoji/wimsyaogo_$f.svg"; then echo "publish.sh: wimsyaogo_$f.svg embeds or links something" >&2; exit 1; fi
-    rsvg-convert -w 128 -h 128 "$D/emoji/wimsyaogo_$f.svg" -o "$D/emoji/wimsyaogo_$f.png"
-    size=$(wc -c < "$D/emoji/wimsyaogo_$f.png" | tr -d " ")
+    cp "$S/out/wimsyaogo_$f.svg" "$E/wimsyaogo_$f.svg"
+    xmllint --noout "$E/wimsyaogo_$f.svg"
+    if grep -q '<image\|href="http' "$E/wimsyaogo_$f.svg"; then echo "publish.sh: wimsyaogo_$f.svg embeds or links something" >&2; exit 1; fi
+    rsvg-convert -w 128 -h 128 "$E/wimsyaogo_$f.svg" -o "$E/wimsyaogo_$f.png"
+    size=$(wc -c < "$E/wimsyaogo_$f.png" | tr -d " ")
     if [ "$size" -gt 262144 ]; then
         echo "publish.sh: emoji/wimsyaogo_$f.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
     fi

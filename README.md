@@ -8,12 +8,13 @@ detail or two of the outfit, and nothing else: Wimsy's shapes stay.
 
 ## What is in this folder
 
-- `wimsy-*.svg` and `wimsy-*.png`: the drawings. The PNGs are 1024x1024 with a transparent background.
+- `dist/wimsy-*.svg` and `dist/wimsy-*.png`: the drawings, with the avatars and edenprobe's cover; `emoji/`: the
+  emojis. The PNGs are 1024x1024 with a transparent background.
 - `wimsy-versions.png` (all of them, five a row) and `wimsy-teto-versions.png` (the three Tetos): the sheets.
 - `tools/wimsy-teto.svg`: Teto UTAU, drawn by hand. Every other drawing is made from it.
 - `tools/make_versions.py`: Teto SV and Teto VOICEPEAK, from the base. It also holds the letters of the marks.
 - `tools/make_vocaloid.py`: everyone else, built on what `make_versions.py` makes.
-- `tools/publish.sh`: checks each SVG, renders the PNGs and the sheets, and copies them all into this folder.
+- `tools/publish.sh`: checks each SVG, renders the PNGs and the sheets, and copies them all into `dist/` and `emoji/`.
 - `tools/make_platforms.py`: the systems ScarletNX ships for, as Wimsy: Linux (Tux: black, a white front, orange
   feet), Windows (blue, the four panes on the arm), Android (green, two antennas), macOS (space grey) and iOS (light
   grey, a blue front), the last two with the apple's leaf over the head. `wimsy-<system>.svg` and `.png` here, and
@@ -82,7 +83,7 @@ font (only for the names on the sheets).
     python3 -I make_accord.py
     sh publish.sh
 
-The generators write into `tools/out/`, and `publish.sh` copies from there into this folder. Teto UTAU is
+The generators write into `tools/out/`, and `publish.sh` copies from there into `dist/` and `emoji/`. Teto UTAU is
 `tools/wimsy-teto.svg` itself: changing it changes the base of every drawing.
 
 ## The anatomy (viewBox 0 0 512 512)
@@ -243,5 +244,5 @@ none, takes her sisters' colours. Those pictures are Kedr's and stay out of this
 ## Checking before sending
 
 `publish.sh` already refuses an invalid SVG (`xmllint`) or one that embeds or links to something outside
-(`<image>`, `href="http`). Then look at `wimsy-versions.png`: that is where a tail that reads as a leg, a strap that
+(`<image>`, `href="http`). Then look at `dist/wimsy-versions.png`: that is where a tail that reads as a leg, a strap that
 became a bandana or an accessory lost in the outline shows.
