@@ -1,0 +1,177 @@
+# SWS's themes: each one's colours, light and dark (Default: dark only). theme.py reads this file and nothing else
+# for colours; the sites' CSS and ScarletNX's GUI themes are made from it.
+#
+# A value is a colour (#rrggbb), mix(A, B, T) (T of the way from A to B; A and B colours or roles), or a role's name.
+# surface and raised are always mix(bg, faint, 25%) and mix(bg, faint, 50%). soft, accent, ok, warn and bad have their
+# lightness moved until they read at 4.5:1 on bg, surface and raised; rule until 3:1; each fill until its on- colour
+# reads on it at 4.5:1. `theme.py --table` says every move.
+
+[sepia]
+name = "Sepia"
+from = "the ScarletNX launcher's warm built-in (src/gui/themes/yorha): [colors] is the light, [run] the dark"
+font = "sans"
+gui = "yorha"            # its light is that built-in; theme.py checks the colours still match and makes sepia-dark
+
+[sepia.light]
+bg = "#dad6be"           # [colors] page
+faint = "#b4b09c"        # [colors] dim
+ink = "#45413a"          # [colors] ink
+soft = "#8a8676"         # [colors] soft
+rule = "#8a8676"
+accent = "ink"           # links and what is filled for "yes" are ink, as the launcher's focused box
+on-accent = "bg"
+ok = "#4a7040"           # [colors] added
+ok-fill = "#4a7040"
+on-ok = "bg"
+warn = "#8a6a2a"         # [colors] warning
+warn-fill = "#d9b24a"    # [run] warning: gold, apart from the green in a row of bars
+on-warn = "ink"
+bad = "#a5473c"          # [colors] failure
+bad-fill = "#a5473c"
+on-bad = "bg"
+
+[sepia.dark]
+bg = "#141416"           # [run] page
+faint = "#3e3e40"        # [run] dim
+ink = "#e6e4dc"          # [run] ink
+soft = "#8e8c86"         # [run] soft
+rule = "#8e8c86"
+accent = "ink"
+on-accent = "bg"
+ok = "#4a7040"
+ok-fill = "#4a7040"
+on-ok = "bg"
+warn = "#d9b24a"         # [run] warning
+warn-fill = "#d9b24a"
+on-warn = "bg"
+bad = "#d2463a"          # [run] failure
+bad-fill = "#d2463a"
+on-bad = "bg"
+
+[wimsy]
+name = "Wimsy"
+from = "Wimsy's own fills (ScarletNX's dist/wimsy.svg): petal #0c8694, head #3ae8ef, leaf #11ce87, wine #66003b"
+font = "sans"
+svg = ["#0c8694", "#3ae8ef", "#11ce87", "#66003b"]   # theme.py --wimsy checks they are still Wimsy's
+
+[wimsy.light]
+bg = "mix(#ffffff, #0c8694, 0.05)"
+faint = "mix(#ffffff, #0c8694, 0.30)"
+ink = "mix(#000000, #0c8694, 0.30)"
+soft = "mix(#000000, #0c8694, 0.60)"
+rule = "#0c8694"
+accent = "#0c8694"
+on-accent = "#ffffff"
+ok = "#11ce87"
+ok-fill = "#11ce87"
+on-ok = "ink"
+warn = "#e0a800"         # not Wimsy's: she has no yellow, and "degraded" needs one
+warn-fill = "#e0a800"
+on-warn = "ink"
+bad = "#66003b"
+bad-fill = "#66003b"
+on-bad = "#ffffff"
+
+[wimsy.dark]
+bg = "mix(#000000, #0c8694, 0.14)"
+faint = "mix(#000000, #0c8694, 0.55)"
+ink = "mix(#ffffff, #3ae8ef, 0.10)"
+soft = "mix(#ffffff, #0c8694, 0.40)"
+rule = "#0c8694"
+accent = "#3ae8ef"
+on-accent = "bg"
+ok = "#11ce87"
+ok-fill = "#11ce87"
+on-ok = "bg"
+warn = "#e0a800"
+warn-fill = "#e0a800"
+on-warn = "bg"
+bad = "mix(#66003b, #ffffff, 0.5)"   # the wine itself, lightened, turns neon
+bad-fill = "mix(#66003b, #ffffff, 0.5)"
+on-bad = "bg"
+
+[fuddles]
+name = "Fuddles"
+from = "Fuddles' Wimsy (ScarletNX's dist/splash/wimsy-fuddles.svg): navy #132a52, blue #3473da, violet #7968f7, cyan #22d3ee, rose #f43f5e"
+font = "sans"
+
+[fuddles.light]
+bg = "mix(#ffffff, #3473da, 0.04)"
+faint = "mix(#ffffff, #3473da, 0.25)"
+ink = "#132a52"
+soft = "mix(#132a52, #ffffff, 0.30)"
+rule = "#5e74f6"
+accent = "#3473da"
+on-accent = "#ffffff"
+ok = "#22d3ee"
+ok-fill = "#22d3ee"
+on-ok = "ink"
+warn = "#e0a800"         # not Fuddles': she has no yellow either
+warn-fill = "#e0a800"
+on-warn = "ink"
+bad = "#f43f5e"
+bad-fill = "#f43f5e"
+on-bad = "#ffffff"
+
+[fuddles.dark]
+bg = "#090e1b"
+faint = "mix(#090e1b, #3473da, 0.35)"
+ink = "#e0faff"
+soft = "#a9c8ff"
+rule = "#5e74f6"
+accent = "#c9b8ff"       # links violet, as cyan is "up"
+on-accent = "bg"
+ok = "#22d3ee"
+ok-fill = "#22d3ee"
+on-ok = "bg"
+warn = "#e0a800"
+warn-fill = "#e0a800"
+on-warn = "bg"
+bad = "#f43f5e"
+bad-fill = "#f43f5e"
+on-bad = "bg"
+
+[default]
+name = "Default"
+from = "the ScarletNX launcher's Default built-in (src/gui/themes/default): black, the 16 colours of an early PC"
+font = "mono"
+gui = "default"          # it is that built-in; theme.py checks the colours still match
+
+[default.dark]
+bg = "#000000"           # [colors] page
+faint = "#505050"        # [colors] dim
+ink = "#dcdcdc"          # [colors] ink
+soft = "#a0aab4"         # [colors] soft
+rule = "#a0aab4"
+accent = "#ffff00"       # [colors] focus
+on-accent = "bg"
+ok = "#55ff55"           # [colors] added
+ok-fill = "#55ff55"
+on-ok = "bg"
+warn = "#ffaa00"         # [colors] warning
+warn-fill = "#ffaa00"
+on-warn = "bg"
+bad = "#ff0000"          # [colors] failure
+bad-fill = "#ff0000"
+on-bad = "bg"
+
+# Each theme's Wimsy (wimsys.py): Liz's five leaves in the theme's colours. Wimsy's own is ScarletNX's dist/wimsy.svg,
+# Fuddles' its dist/splash/wimsy-fuddles.svg; Default's is drawn on a 32 by 32 grid of an early PC's 16 colours.
+[sepia.wimsy]
+back = "#45413a"
+front = "#6f6b5e"
+lower = "#8a8676"
+head = "#8a6a2a"
+outline = "#dad6be"
+eye = "#141416"
+shine = "#e6e4dc"
+
+[default.wimsy]
+grid = 32
+back = "#00aaaa"
+front = "#55ff55"
+lower = "#00aa00"
+head = "#55ffff"
+outline = "#000000"
+eye = "#000000"
+shine = "#ffffff"
