@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_accord.py: Wimsy as Accord, DraVee's forge (accord.dravee.dev), and the avatar of the AccordWimsy bot, from the
 forge's own mark (its assets/img/logo.svg): black and white, a disc ringed by a twisted rope, a cross of four petals
 with a dot between each two. Here the rope is the front wing's trim, small white leaves slanted across a black band,

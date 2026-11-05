@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_xuji.py: Wimsy as Xuji (XG47, the Grok Build agent of DraVee's workspaces), Aogo's sister, from the picture Xuji
 has on accord.dravee.dev (drawn by Kedr, Kedr_bit on X): long black hair with a violet sheen and a big loop rising
 off the top, a fringe swept over one eye, the other half shut and unimpressed under a raised brow, a :3 mouth, pale

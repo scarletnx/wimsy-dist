@@ -1,0 +1,41 @@
+# The licence of every file, in REUSE's format (reuse.software). tools/licences.py stamps each drawing with what this
+# file gives it, and tools/check_dist.py fails when a file has no licence, two, or one its own header contradicts.
+version = 1
+
+# The fan art: Wimsy as singers, as systems, as DraVee's agents, with their emojis, the avatar and the sheets. Liz
+# allows her Wimsy in these non-commercial drawings.
+[[annotations]]
+path = [
+    "dist/wimsy-teto-*", "dist/wimsy-miku.*", "dist/wimsy-neru.*", "dist/wimsy-defoko.*", "dist/wimsy-adachi-rei-*",
+    "dist/wimsy-gumi.*", "dist/wimsy-yi-xi-*", "dist/wimsy-versions.png",
+    "dist/wimsy-linux.*", "dist/wimsy-windows.*", "dist/wimsy-android.*", "dist/wimsy-macos.*", "dist/wimsy-ios.*",
+    "dist/wimsy-aogo.*", "dist/wimsy-afugo.*", "dist/wimsy-asugo.*", "dist/wimsy-xuji.*", "dist/aogowimsy-avatar.png",
+    "emoji/**",
+]
+SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
+SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
+
+# What ScarletNX and edenprobe ship (Fuddles is ScarletNX's splash and default user picture, edenprobe's cover is
+# its icon), Accord's own mark, and the drawing every generator starts from: GPL, as Wimsy is.
+[[annotations]]
+path = [
+    "dist/wimsy-fuddles.*", "dist/wimsy-edenprobe.*", "dist/edenprobe-icon.*", "dist/wimsy-accord.*",
+    "dist/accordwimsy-avatar.png", "tools/wimsy-teto.svg",
+]
+SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# The theme Wimsys, the palettes and the SWS, which ScarletNX and wimsy-core take as they are.
+[[annotations]]
+path = ["themes/**", "docs/SWS.md"]
+SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# The generators, the checks and their tests, the docs. A file that carries its own SPDX lines says the same.
+[[annotations]]
+path = [
+    "tools/*.py", "tools/*.sh", "tests/**", "README.md", "docs/README.md", "docs/MAKING.md", "docs/CREDITS.md",
+    ".gitignore", ".github/**",
+]
+SPDX-FileCopyrightText = "2026 the wimsy-dist contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"

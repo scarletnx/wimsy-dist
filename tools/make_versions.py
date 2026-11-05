@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_versions.py: Wimsy with twin drills in the colours of Kasane Teto's Synthesizer V and VOICEPEAK designs, from
 wimsy-teto.svg (the UTAU colours) beside it. Colours read off kasaneteto.jp's official illustrations."""
 import os

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_aogo_emoji.py: the reactions the AogoWimsy bot puts on Discord messages, as emojis of Wimsy as Aogo
 (make_aogo.py), one for each meaning: eyes (seen, on it), thumbsup (agreed), done (done), no (cannot). Each is the
 whole drawing, so a reaction row still shows Wimsy's five leaves in Aogo's coral, with her face drawn heavier than

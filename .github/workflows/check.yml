@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
+# every file licensed, every drawing credited, no machine path or title ID: tools/check_dist.py and its test
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -I tools/check_dist.py
+      - run: python3 -I tests/test_check_dist.py

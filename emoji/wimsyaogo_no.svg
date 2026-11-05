@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: Liz (Wimsy, ScarletNX's dist/wimsy.svg) -->
+<!-- SPDX-FileCopyrightText: 2026 the wimsy-dist contributors -->
+<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+<!-- wimsyaogo_no, a Discord emoji: the AogoWimsy bot's reaction for cannot -->
 <!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Aogo's long coral hair, glasses and a clip and colours.
      The leaves keep Wimsy's own shapes; colours from Aogo's drawing on accord.dravee.dev, drawn by Kedr (Kedr_bit on X); fan art. -->
-<!-- wimsyaogo_no, a Discord emoji: the AogoWimsy bot's reaction for cannot -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
      viewBox="0 0 512 512" fill="none">
   <metadata>
@@ -11,7 +14,7 @@
         <dc:title>wimsyaogo_no: Wimsy as Aogo, the AogoWimsy bot's reaction for cannot</dc:title>
         <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
         <dc:contributor><cc:Agent><dc:title>AO55 (long coral hair, glasses and a clip, Aogo's colours)</dc:title></cc:Agent></dc:contributor>
-        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:license rdf:resource="https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"/>
         <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
       </cc:Work>
     </rdf:RDF>

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_edenprobe.py: Wimsy as edenprobe, the test program ScarletNX and rEden are held to: Eden's sunset colours
 (its pink, purple and blue, the cyan of its mark's edge) and a test probe, its needle out toward the empty corner,
 its cable curling after it. Writes out/wimsy-edenprobe.svg, and out/edenprobe-icon.svg: the drawing on the banded
@@ -79,6 +81,18 @@ def icon(drawing):
     inner = drawing[drawing.index(">", drawing.index("<svg")) + 1:drawing.rindex("</svg>")]
     inner = re.sub(r"\s*<metadata>.*?</metadata>", "", inner, flags=re.S)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>edenprobe's cover: Wimsy as edenprobe over the banded sun</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (sunset and a test probe, edenprobe's colours, its cover)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
   <!-- edenprobe's cover: Wimsy as edenprobe (Wimsy is Liz's, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later), in
        Eden's sunset colours with a test probe, over the reden mark (the Eden sunset without the palm, cut by its
        bands) on the dark ground, with the program's name. Made by wimsy-dist's tools/make_edenprobe.py; the source

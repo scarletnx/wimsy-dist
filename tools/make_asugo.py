@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_asugo.py: Wimsy as Asugo (AS55, the Sonnet agent of DraVee's workspaces), Aogo's carefree sister. Asugo has no
 drawing of her own (accord.dravee.dev shows only Gravatar's pattern for her), so she takes her sisters' colours, from
 Kedr's drawings of them (Kedr_bit on X): apricot hair, Aogo's coral made lighter and more golden as Afugo's rust is

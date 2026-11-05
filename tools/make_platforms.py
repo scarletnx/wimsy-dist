@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_platforms.py: Wimsy as the systems ScarletNX ships for, the icons beside each download in ReiWimsy's cards:
 Linux (Tux), Windows, Android, macOS and iOS. Each takes its system's colours and one detail of its mark, as the
 singers take theirs: Tux's white front and orange feet, Windows' four panes on the arm, Android's antennas, the

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_aogo.py: Wimsy as Aogo (AO55, the agent of DraVee's workspaces), the avatar of the AogoWimsy bot, from the
 drawing Aogo has on accord.dravee.dev (drawn by Kedr, Kedr_bit on X): long coral hair, glasses, a black clip in the
 hair, a white top with coral at the neck, eyes shut in a smile. Made with make_vocaloid's pieces, as the other

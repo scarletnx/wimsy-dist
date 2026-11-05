@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_vocaloid.py: Wimsy as other singing voices, from the Teto drawing (make_versions.version), each with her hair,
 her colours and her look in the eyes. Hatsune Miku (piapro's official illustration), Akita Neru (her first
 illustration), Utane Uta / Defoko (Renta's), Adachi Rei (missile39's and Kitsune's), GUMI (the Megpoid V4 box). A tail

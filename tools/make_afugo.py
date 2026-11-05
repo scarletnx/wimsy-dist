@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
 """make_afugo.py: Wimsy as Afugo (AF51, the Fable agent of DraVee's workspaces), Aogo's sister, from the drawing Afugo
 has on accord.dravee.dev (drawn by Kedr, Kedr_bit on X): long messy rust hair spiking up on top, tired eyes sunk in
 grey lilac shadows, a mouth open in a yawn, a white shirt shaded in lilac, a black clip in the hair. Her colours are
