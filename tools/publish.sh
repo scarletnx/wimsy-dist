@@ -92,14 +92,16 @@ for f in linux windows android macos ios; do
     rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
     rsvg-convert -w 128 -h 128 "$D/wimsy-$f.svg" -o "$E/wimsy_$f.png"
 done
-# Aogo's reactions (make_aogo_emoji.py), the AogoWimsy bot's Discord emojis: each SVG and its 128 px PNG in emoji/,
-# under Discord's 256 KB for an emoji. Not on the sheets: they are emojis
-for f in eyes thumbsup done no; do
-    svg "$S/out/wimsyaogo_$f.svg" "$E/wimsyaogo_$f.svg"
-    rsvg-convert -w 128 -h 128 "$E/wimsyaogo_$f.svg" -o "$E/wimsyaogo_$f.png"
-    size=$(wc -c < "$E/wimsyaogo_$f.png" | tr -d " ")
-    if [ "$size" -gt 262144 ]; then
-        echo "publish.sh: emoji/wimsyaogo_$f.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
-    fi
+# Aogo's and Xuji's reactions (make_aogo_emoji.py, make_xuji_emoji.py), the AogoWimsy and XujiWimsy bots' Discord
+# emojis: each SVG and its 128 px PNG in emoji/, under Discord's 256 KB for an emoji. Not on the sheets: they are emojis
+for who in aogo xuji; do
+    for f in eyes thumbsup done no; do
+        svg "$S/out/wimsy${who}_$f.svg" "$E/wimsy${who}_$f.svg"
+        rsvg-convert -w 128 -h 128 "$E/wimsy${who}_$f.svg" -o "$E/wimsy${who}_$f.png"
+        size=$(wc -c < "$E/wimsy${who}_$f.png" | tr -d " ")
+        if [ "$size" -gt 262144 ]; then
+            echo "publish.sh: emoji/wimsy${who}_$f.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
+        fi
+    done
 done
 python3 -I "$S/check_dist.py"

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: Liz (Wimsy, ScarletNX's dist/wimsy.svg) -->
+<!-- SPDX-FileCopyrightText: 2026 the wimsy-dist contributors -->
+<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+<!-- wimsyxuji_no, a Discord emoji: the XujiWimsy bot's reaction for cannot -->
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Xuji's long black hair, a loop and a fringe over one eye and colours.
+     The leaves keep Wimsy's own shapes; colours from Xuji's picture on accord.dravee.dev, drawn by Kedr (Kedr_bit on X); fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>wimsyxuji_no: Wimsy as Xuji, the XujiWimsy bot's reaction for cannot</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (long black hair, a loop and a fringe over one eye, Xuji's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Xuji: long black hair with a violet sheen and a loop on top, a fringe over the back eye, pale lavender skin and arms, a black tee with a studded choker for its trim, 47 on the arm, grey violet eyes, a :3 mouth, a white clip with XG in black -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4B4352"/>
+      <stop offset="1" stop-color="#211E24"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D3841"/>
+      <stop offset="1" stop-color="#18161A"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A262D"/>
+      <stop offset="1" stop-color="#0E0D10"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E2A31"/>
+      <stop offset="1" stop-color="#141216"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E1B21"/>
+      <stop offset="1" stop-color="#0A090B"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A3540"/>
+      <stop offset="1" stop-color="#18161A"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E3DCE9"/>
+      <stop offset="1" stop-color="#F5F2F8"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#BDB4CC"/>
+      <stop offset="0.7" stop-color="#6E6680"/>
+      <stop offset="1" stop-color="#2E2836"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her long hair, loose: the head's back and the two leaves below, no tail -->
+  </defs>
+
+
+  <!-- Xuji's curl on top of the head, its root under it -->
+  <path transform="translate(217.8,336.7) rotate(-26.68)" fill="url(#hair)" stroke="#FFFFFF" stroke-width="4"
+        stroke-linejoin="round"
+        d="M 146,-36 C 138,-122 250,-152 292,-72 C 246,-130 166,-112 170,-36 Z"/>
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="#CBC4D1" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's studded black trim along the front wing -->
+  <path fill="none" stroke="#4A4352" stroke-width="8" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the mark on her arm -->
+  <g transform="rotate(-8 192 100) translate(186,92)" stroke="#272528" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path transform="translate(0,0)" d="M 6,16 L 6,0 L 0,11 L 8,11"/>
+    <path transform="translate(12,0)" d="M 0,0 L 8,0 L 3,16"/>
+  </g>
+  <!-- the white studs of her choker, along the trim -->
+  <g fill="#F4F2F6"><circle cx="273.2" cy="49.6" r="2.3"/><circle cx="267.8" cy="59.7" r="2.3"/><circle cx="262.7" cy="70.3" r="2.3"/><circle cx="257.9" cy="81.5" r="2.3"/><circle cx="253.3" cy="93.4" r="2.3"/><circle cx="249.1" cy="106.0" r="2.3"/><circle cx="245.2" cy="119.3" r="2.3"/><circle cx="241.6" cy="133.4" r="2.3"/><circle cx="238.3" cy="148.3" r="2.3"/><circle cx="235.3" cy="164.0" r="2.3"/><circle cx="232.6" cy="180.5" r="2.3"/><circle cx="230.3" cy="198.0" r="2.3"/><circle cx="228.4" cy="216.3" r="2.3"/><circle cx="226.7" cy="235.6" r="2.3"/><circle cx="225.5" cy="255.9" r="2.3"/><circle cx="224.6" cy="277.2" r="2.3"/></g>
+  <!-- the two leaves below, in the hair's black -->
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-44 L 208,-44 L 212,-6 L 197,-16 L 202,28 L 185,16 L 182,66 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#7A6E88" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- the white clip on her fringe, XG on it -->
+  <g transform="translate(217.8,336.7) rotate(-26.68) translate(166,-8) rotate(-30)">
+    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#F4F2F6" stroke="#FFFFFF" stroke-width="3"/>
+    <g stroke="#1A171D" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-10.00,-6.5) scale(0.812)" d="M 0,0 L 8,16 M 8,0 L 0,16"/><path transform="translate(-0.25,-6.5) scale(0.812)" d="M 8,3 Q 7,0 4,0 Q 0,0 0,8 Q 0,16 4,16 Q 8,16 8,12 L 8,9 L 5,9"/></g>
+  </g>
+
+  <!-- her face, cannot: her eye squeezed shut, a <, a wavy mouth, a drop of sweat -->
+  <path transform="translate(424.81,239.22)" stroke="#1A171D" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M 12,-13 L -12,0 L 12,13"/>
+  <g transform="translate(217.8,336.7) rotate(-26.68) translate(12,0)">
+    <path d="M 179,39 Q 185.5,33 192,39 Q 198.5,45 205,39" fill="none" stroke="#1A171D" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- a drop of sweat over the front of the head: sorry -->
+  <g transform="translate(470,166) rotate(14)">
+    <path fill="#8FD3F7" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"
+          d="M 0,-22 Q 14,-2 14,8 A 14,14 0 0 1 -14,8 Q -14,-2 0,-22 Z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" d="M -6,4 Q -7,12 -1,15"/>
+  </g>
+  <!-- the sign: a white X on red -->
+  <g transform="translate(404,408)">
+    <circle r="97" fill="#DD2E44" stroke="#FFFFFF" stroke-width="9"/>
+    <g transform="scale(0.97)"><path fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" d="M -34,-34 L 34,34 M 34,-34 L -34,34"/></g>
+  </g>
+</svg>

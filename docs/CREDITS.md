@@ -47,7 +47,7 @@ The icons beside each download in ReiWimsy's cards.
 | --- | --- | --- |
 | `wimsy-aogo`, `aogowimsy-avatar`, `wimsyaogo_eyes`, `wimsyaogo_thumbsup`, `wimsyaogo_done`, `wimsyaogo_no` | Aogo (AO55), from her drawing by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
 | `wimsy-afugo` | Afugo (AF51), from her drawing by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
-| `wimsy-xuji` | Xuji (XG47), from her picture by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
+| `wimsy-xuji`, `wimsyxuji_eyes`, `wimsyxuji_thumbsup`, `wimsyxuji_done`, `wimsyxuji_no` | Xuji (XG47), from her picture by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
 | `wimsy-asugo` | Asugo (AS55), in her sisters' colours, from Kedr's drawings of them | CC-BY-NC-SA-4.0 |
 
 ## Programs and places
