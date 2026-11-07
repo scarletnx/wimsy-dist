@@ -55,6 +55,11 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   are larger and in a thicker line than the drawing's, and so are her eyes: the drawing's lines fade into the skin
   below 48 px. The face reads from 48 px; at 32 px it shows as her glasses, the sign as itself. `publish.sh` refuses
   one over Discord's 256 KB. Not on the sheets: they are emojis.
+- `tools/make_xuji_emoji.py`: the XujiWimsy bot's reactions, `emoji/wimsyxuji_<name>.svg` and its `.png` at 128 px, with
+  the names, meanings and signs of Aogo's above so both bots' reactions read alike. Her fringe covers the back eye, so
+  each face is the front eye alone in her near black, heavier than the drawing's, and the mouth sits toward the front
+  of the face where her `:3` is: `wimsyxuji_eyes` her eye wide open and her `:3`; `wimsyxuji_thumbsup` her eye a `^`, a
+  wide smile; `wimsyxuji_done` a `^`, an open grin; `wimsyxuji_no` a `<`, a wavy mouth, a drop of sweat.
 - `tools/make_afugo.py`: Afugo (AF51, DraVee's Fable agent), Aogo's sister, from her drawing on accord.dravee.dev (drawn
   by Kedr, Kedr_bit on X): long messy rust hair with two spikes on top, tired eyes over grey lilac shadows, a yawn, a
   black clip with AF, 51 on the sleeve. The rust is her drawing's, redder and darker than Aogo's coral, and the lilac
@@ -96,6 +101,7 @@ font (only for the names on the sheets).
     python3 -I make_afugo.py
     python3 -I make_asugo.py
     python3 -I make_xuji.py
+    python3 -I make_xuji_emoji.py
     python3 -I make_accord.py
     python3 -I make_edenprobe.py
     sh publish.sh
