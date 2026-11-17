@@ -80,8 +80,9 @@ if grep -q '<image\|href="http' "$S/out/accordwimsy-avatar.svg"; then
     echo "publish.sh: accordwimsy-avatar.svg embeds or links something" >&2; exit 1
 fi
 rsvg-convert -w 1024 -h 1024 "$S/out/accordwimsy-avatar.svg" -o "$D/accordwimsy-avatar.png"
-# edenprobe (make_edenprobe.py): its SVG and PNG, and its cover, which edenprobe keeps as static/icon.svg
-for f in wimsy-edenprobe edenprobe-icon; do
+# edenprobe (make_edenprobe.py) and Amberlith, what edenprobe became at 1.0.0 (make_amberlith.py): each one's SVG and
+# PNG, and its cover, which the program keeps as static/icon.svg
+for f in wimsy-edenprobe edenprobe-icon wimsy-amberlith amberlith-icon; do
     svg "$S/out/$f.svg" "$D/$f.svg"
     rsvg-convert -w 1024 -h 1024 "$D/$f.svg" -o "$D/$f.png"
 done
