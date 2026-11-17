@@ -20,8 +20,8 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
 
 ## What is in this repo
 
-- `dist/wimsy-*.svg` and `dist/wimsy-*.png`: the drawings, with the avatars and edenprobe's cover; `emoji/`: the
-  emojis. The PNGs are 1024x1024 with a transparent background.
+- `dist/wimsy-*.svg` and `dist/wimsy-*.png`: the drawings, with the avatars and edenprobe's and Amberlith's covers;
+  `emoji/`: the emojis. The PNGs are 1024x1024 with a transparent background.
 - `dist/wimsy-versions.png` (all the singers, five a row) and `dist/wimsy-teto-versions.png` (the three Tetos): the
   sheets.
 - `themes/`: each SWS theme's Wimsy and palette, made by `themes/wimsys.py` and `themes/theme.py` ([SWS](SWS.md)).
@@ -80,7 +80,12 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   out toward the drawing's empty lower right and its cable curling after it. `dist/wimsy-edenprobe.svg` and `.png`,
   and `dist/edenprobe-icon.svg` and `.png`, edenprobe's cover: the drawing over the banded sun its `static/icon.svg` had,
   with the program's name; edenprobe's `make icon` turns it into the NRO's icon.jpg. Not on the sheets: it is a
-  program.
+  program. Its probe and its cover are functions the next one takes too.
+- `tools/make_amberlith.py`: Amberlith, what edenprobe became at its 1.0.0: edenprobe's drawing with amber for Eden's
+  sunset (the hair from light amber down to amber, the leaves below from pale amber to burnt, amber eyes, a gold trim on
+  the white front), the probe ringed in amber. `dist/wimsy-amberlith.svg` and `.png`, and `dist/amberlith-icon.svg`
+  and `.png`, Amberlith's cover: the drawing over a dark amber sun cut by the same bands, dark so that the amber
+  stands out on it, with the program's name. Not on the sheets: it is a program.
 - `tools/make_accord.py`: Accord, DraVee's forge (accord.dravee.dev), from its mark (the forge's
   `assets/img/logo.svg`): black and white, the mark's rope as small white leaves slanted across the black trim, its cross
   of four petals, four leaves with a dot between each two, on the arm. `dist/wimsy-accord.svg` and `.png`, and
@@ -104,6 +109,7 @@ font (only for the names on the sheets).
     python3 -I make_xuji_emoji.py
     python3 -I make_accord.py
     python3 -I make_edenprobe.py
+    python3 -I make_amberlith.py
     sh publish.sh
 
 The generators write into `tools/out/`, and `publish.sh` copies from there into `dist/` and `emoji/`. Teto UTAU is

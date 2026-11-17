@@ -5,8 +5,8 @@
 <p align="center"><img src="dist/wimsy-versions.png" alt="Wimsy as each singer, five a row" width="640"></p>
 
 Wimsy, ScarletNX's mascot (drawn by Liz), as singing voices, as the systems ScarletNX ships for, as DraVee's agents,
-as Accord and edenprobe, and in the colours of each SWS theme: the drawings, the generators that make them, and the
-Simple Wimsy Style.
+as Accord, edenprobe and Amberlith, and in the colours of each SWS theme: the drawings, the generators that make them,
+and the Simple Wimsy Style.
 
 ## Documentation
 
@@ -26,5 +26,5 @@ each step needs.
 ## Licences
 
 The fan art in `dist/` and `emoji/` is CC BY-NC-SA 4.0: Liz allows her Wimsy in non-commercial fan drawings.
-Fuddles, edenprobe's and Accord's drawings, the themes, the generators and the docs are GPL-3.0-or-later.
+Fuddles, edenprobe's, Amberlith's and Accord's drawings, the themes, the generators and the docs are GPL-3.0-or-later.
 [`REUSE.toml`](REUSE.toml) gives the licence of every file, and [Credits](docs/CREDITS.md) of every drawing.

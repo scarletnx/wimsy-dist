@@ -4,14 +4,14 @@
 
 Wimsy is Liz's: ScarletNX's mascot (`dist/wimsy.svg` there), GPL-3.0-or-later. Every drawing here is her five leaves
 in the colours and a detail or two of what inspired it, drawn by AO55, DraVee's agent. Liz allows her Wimsy in
-non-commercial fan drawings, so the fan art here is CC BY-NC-SA 4.0; what ScarletNX and edenprobe ship stays
-GPL-3.0-or-later, as Wimsy is. [`REUSE.toml`](../REUSE.toml) gives the licence of every file, and
+non-commercial fan drawings, so the fan art here is CC BY-NC-SA 4.0; what ScarletNX, edenprobe and Amberlith ship
+stays GPL-3.0-or-later, as Wimsy is. [`REUSE.toml`](../REUSE.toml) gives the licence of every file, and
 [`LICENSES/`](../LICENSES) holds both texts.
 
 | What | Licence |
 | --- | --- |
 | The fan art in `dist/` and `emoji/`: the singers, the systems, DraVee's agents, their emojis and avatar, the sheets | [CC-BY-NC-SA-4.0](../LICENSES/CC-BY-NC-SA-4.0.txt) |
-| Fuddles, edenprobe's drawing and cover, Accord's drawing and avatar | [GPL-3.0-or-later](../LICENSES/GPL-3.0-or-later.txt) |
+| Fuddles, edenprobe's and Amberlith's drawings and covers, Accord's drawing and avatar | [GPL-3.0-or-later](../LICENSES/GPL-3.0-or-later.txt) |
 | The theme Wimsys and palettes (`themes/`), the [SWS](SWS.md), the generators, the checks, their tests and these docs | [GPL-3.0-or-later](../LICENSES/GPL-3.0-or-later.txt) |
 
 ## The singers
@@ -56,6 +56,7 @@ The icons beside each download in ReiWimsy's cards.
 | --- | --- | --- |
 | `wimsy-accord`, `accordwimsy-avatar` | Accord, DraVee's forge ([accord.dravee.dev](https://accord.dravee.dev/)), and its mark | GPL-3.0-or-later |
 | `wimsy-edenprobe`, `edenprobe-icon` | edenprobe, in Eden's sunset colours (Eden's `dist/dev.eden_emu.eden.svg`, the Eden Emulator Project, GPL-3.0-or-later) | GPL-3.0-or-later |
+| `wimsy-amberlith`, `amberlith-icon` | Amberlith, what edenprobe became at 1.0.0: edenprobe's drawing in amber, the program's name | GPL-3.0-or-later |
 
 ## The themes
 

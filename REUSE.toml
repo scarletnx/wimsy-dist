@@ -15,12 +15,12 @@ path = [
 SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
 SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
 
-# What ScarletNX and edenprobe ship (Fuddles is ScarletNX's splash and default user picture, edenprobe's cover is
-# its icon), Accord's own mark, and the drawing every generator starts from: GPL, as Wimsy is.
+# What ScarletNX, edenprobe and Amberlith ship (Fuddles is ScarletNX's splash and default user picture, edenprobe's and
+# Amberlith's covers are their icons), Accord's own mark, and the drawing every generator starts from: GPL, as Wimsy is.
 [[annotations]]
 path = [
-    "dist/wimsy-fuddles.*", "dist/wimsy-edenprobe.*", "dist/edenprobe-icon.*", "dist/wimsy-accord.*",
-    "dist/accordwimsy-avatar.png", "tools/wimsy-teto.svg",
+    "dist/wimsy-fuddles.*", "dist/wimsy-edenprobe.*", "dist/edenprobe-icon.*", "dist/wimsy-amberlith.*",
+    "dist/amberlith-icon.*", "dist/wimsy-accord.*", "dist/accordwimsy-avatar.png", "tools/wimsy-teto.svg",
 ]
 SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
 SPDX-License-Identifier = "GPL-3.0-or-later"

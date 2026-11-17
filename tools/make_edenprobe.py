@@ -24,12 +24,12 @@ GROUND = "#1B1B1F"  # edenprobe's cover's dark ground
 PROBE_AT, PROBE_TURN = (236, 352), 28
 
 
-def probe():
+def probe(rings="the sunset"):
     """a test probe as a meter's or a scope's is: the cable out of a tapered boot at its back, the dark grip with two
-    rings in the sunset's colours, the wide guard that keeps a finger off the metal, the long needle; white round
-    each as every line here is"""
+    rings in the drawing's colours (@p rings, its #probe-ring), the wide guard that keeps a finger off the metal, the
+    long needle; white round each as every line here is"""
     cable = "M -14,0 C -40,8 -42,48 -14,64 C 14,80 8,114 -24,126"
-    return f'''  <!-- the test probe: its cable, the boot, the dark grip ringed in the sunset, the guard, the needle -->
+    return f'''  <!-- the test probe: its cable, the boot, the dark grip ringed in {rings}, the guard, the needle -->
   <g transform="translate({PROBE_AT[0]},{PROBE_AT[1]}) rotate({PROBE_TURN})" stroke-linejoin="round">
     <path d="{cable}" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
     <path d="{cable}" fill="none" stroke="{DARK}" stroke-width="8" stroke-linecap="round"/>
@@ -77,7 +77,17 @@ EDENPROBE = character(
 SCALE, AT = 0.40, (24, 2)
 
 
-def icon(drawing):
+ABOUT = """edenprobe's cover: Wimsy as edenprobe (Wimsy is Liz's, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later), in
+       Eden's sunset colours with a test probe, over the reden mark (the Eden sunset without the palm, cut by its
+       bands) on the dark ground, with the program's name. Made by wimsy-dist's tools/make_edenprobe.py; the source
+       of icon.jpg: make icon."""
+
+
+def icon(drawing, title="edenprobe's cover: Wimsy as edenprobe over the banded sun",
+         contributor="sunset and a test probe, edenprobe's colours, its cover", about=ABOUT,
+         sun=(PINK, PURPLE, BLUE), name="edenprobe", ink="#e8e8ec"):
+    """a program's cover: @p drawing over a sun of @p sun's three colours cut by bands, on the dark ground, with
+    @p name below in @p ink"""
     inner = drawing[drawing.index(">", drawing.index("<svg")) + 1:drawing.rindex("</svg>")]
     inner = re.sub(r"\s*<metadata>.*?</metadata>", "", inner, flags=re.S)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
@@ -85,23 +95,20 @@ def icon(drawing):
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <cc:Work rdf:about="">
-        <dc:title>edenprobe's cover: Wimsy as edenprobe over the banded sun</dc:title>
+        <dc:title>{title}</dc:title>
         <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
-        <dc:contributor><cc:Agent><dc:title>AO55 (sunset and a test probe, edenprobe's colours, its cover)</dc:title></cc:Agent></dc:contributor>
+        <dc:contributor><cc:Agent><dc:title>AO55 ({contributor})</dc:title></cc:Agent></dc:contributor>
         <dc:license rdf:resource="https://spdx.org/licenses/GPL-3.0-or-later.html"/>
         <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <!-- edenprobe's cover: Wimsy as edenprobe (Wimsy is Liz's, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later), in
-       Eden's sunset colours with a test probe, over the reden mark (the Eden sunset without the palm, cut by its
-       bands) on the dark ground, with the program's name. Made by wimsy-dist's tools/make_edenprobe.py; the source
-       of icon.jpg: make icon. -->
+  <!-- {about} -->
   <defs>
     <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="{PINK.lower()}"/>
-      <stop offset="0.45" stop-color="{PURPLE.lower()}"/>
-      <stop offset="0.9" stop-color="{BLUE.lower()}"/>
+      <stop offset="0" stop-color="{sun[0].lower()}"/>
+      <stop offset="0.45" stop-color="{sun[1].lower()}"/>
+      <stop offset="0.9" stop-color="{sun[2].lower()}"/>
     </linearGradient>
     <mask id="bands">
       <rect width="256" height="256" fill="#fff"/>
@@ -114,7 +121,7 @@ def icon(drawing):
   <rect width="256" height="256" fill="{GROUND.lower()}"/>
   <circle cx="128" cy="112" r="90" fill="url(#sun)" mask="url(#bands)"/>
   <g fill="none" transform="translate({AT[0]},{AT[1]}) scale({SCALE})">{inner}</g>
-  <text x="128" y="238" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-weight="bold" font-size="30" letter-spacing="1" fill="#e8e8ec">edenprobe</text>
+  <text x="128" y="238" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, sans-serif" font-weight="bold" font-size="30" letter-spacing="1" fill="{ink}">{name}</text>
 </svg>
 '''
 
