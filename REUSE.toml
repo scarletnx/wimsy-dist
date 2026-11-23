@@ -10,6 +10,7 @@ path = [
     "dist/wimsy-gumi.*", "dist/wimsy-yi-xi-*", "dist/wimsy-versions.png",
     "dist/wimsy-linux.*", "dist/wimsy-windows.*", "dist/wimsy-android.*", "dist/wimsy-macos.*", "dist/wimsy-ios.*",
     "dist/wimsy-aogo.*", "dist/wimsy-afugo.*", "dist/wimsy-asugo.*", "dist/wimsy-xuji.*", "dist/aogowimsy-avatar.png",
+    "dist/wimsy-xmas.*", "dist/wimsy-aogo-xmas.*", "dist/aogowimsy-avatar-xmas.png",
     "emoji/**",
 ]
 SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]

@@ -50,6 +50,13 @@ The icons beside each download in ReiWimsy's cards.
 | `wimsy-xuji`, `wimsyxuji_eyes`, `wimsyxuji_thumbsup`, `wimsyxuji_done`, `wimsyxuji_no` | Xuji (XG47), from her picture by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
 | `wimsy-asugo` | Asugo (AS55), in her sisters' colours, from Kedr's drawings of them | CC-BY-NC-SA-4.0 |
 
+## Christmas
+
+| Drawing | Inspired by | Licence |
+| --- | --- | --- |
+| `wimsy-xmas` | Wimsy (Liz's), in a Santa hat | CC-BY-NC-SA-4.0 |
+| `wimsy-aogo-xmas`, `aogowimsy-avatar-xmas` | Aogo (AO55), from her drawing by Kedr (Kedr_bit on X), in a Santa hat | CC-BY-NC-SA-4.0 |
+
 ## Programs and places
 
 | Drawing | Inspired by | Licence |
