@@ -79,7 +79,8 @@ for f in xmas aogo-xmas; do
 done
 rsvg-convert -w 758 -h 758 "$D/wimsy-aogo-xmas.svg" -o "$T/aogo-xmas-758.png"
 magick -size 1024x1024 xc:none -fill "#2A2830" -draw "circle 512,512 512,0" \
-    "$T/aogo-xmas-758.png" -gravity center -composite "$D/aogowimsy-avatar-xmas.png"
+    "$T/aogo-xmas-758.png" -gravity center -composite -define png:exclude-chunks=date,time \
+    "$D/aogowimsy-avatar-xmas.png"
 # Accord (make_accord.py): its SVG and PNG, and the AccordWimsy bot's avatar, the drawing on Accord's disc ringed by
 # its rope (its SVG stays in out/); not on the sheets: Accord is a forge, not a singer
 svg "$S/out/wimsy-accord.svg" "$D/wimsy-accord.svg"

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
-"""make_xmas.py: Christmas Wimsys, a Santa hat on the head: Wimsy herself (the base, wimsy-teto.svg) and Aogo
-(make_aogo.py's drawing). The hat keeps the style: its cone a red leaf whose tip droops back, the fur a white leaf
+"""make_xmas.py: Christmas Wimsys, a Santa hat on the head: Wimsy herself (Liz's original, tools/wimsy.svg, the
+bytes of ScarletNX's dist/wimsy.svg) and Aogo (make_aogo.py's drawing). The hat keeps the style: its cone a red leaf whose tip droops back, the fur a white leaf
 lying along the head's upper edge (nothing runs across a leaf), the pompom a white leaf rolled round at the tip.
 Writes out/wimsy-xmas.svg and out/wimsy-aogo-xmas.svg."""
 import math
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +21,7 @@ RED = ("#EE3B43", "#B21E2B")
 FUR = ("#FFFFFF", "#E4E2EA")
 
 
-R_EDGE = 330.76661  # the radius of the head's upper edge, the arc from the centre to the tip (wimsy-teto.svg)
+R_EDGE = 330.76661  # the radius of the head's upper edge, the arc from the centre to the tip (wimsy.svg, wimsy-teto.svg)
 
 
 def edge(x):
@@ -72,9 +73,13 @@ def hat(start=150, end=300, tip=(118, -120), uid="hat"):
 
 
 def wimsy_xmas():
-    """the base drawing with the hat drawn over the head, last, so nothing covers it"""
-    with open(os.path.join(HERE, "wimsy-teto.svg"), encoding="utf-8") as f:
+    """Liz's Wimsy with the hat drawn over the head, last, so nothing covers it"""
+    with open(os.path.join(HERE, "wimsy.svg"), encoding="utf-8") as f:
         svg = f.read()
+    # Inkscape breaks the licence's tag over lines; licences.py stamps the one-line form
+    svg, n = re.subn(r'<dc:license\s+rdf:resource="([^"]*)"\s*/>', r'<dc:license rdf:resource="\1"/>', svg)
+    if n != 1:
+        raise SystemExit(f"tools/wimsy.svg: {n} dc:license tags in its metadata, where make_xmas.py expects 1")
     at = svg.rindex("</svg>")
     return svg[:at] + hat(uid="wimsy-hat") + svg[at:]
 

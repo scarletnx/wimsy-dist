@@ -75,7 +75,8 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   head, a fringe swept over the back eye in pointed locks, the other eye half shut and unimpressed under a raised brow,
   a `:3` mouth, pale lavender skin, a black tee with her studded choker as its trim, her bare lavender arms as the back
   wing, a white clip with XG, 47 on the arm. `dist/wimsy-xuji.svg` and `.png`. Not on the sheets: she is not a singer.
-- `tools/make_xmas.py`: Christmas Wimsys, a Santa hat on the head: Wimsy herself (the base) and Aogo, whose hat sits
+- `tools/wimsy.svg`: Wimsy as Liz drew her, the bytes of ScarletNX's `dist/wimsy.svg`, the Christmas Wimsy's base.
+- `tools/make_xmas.py`: Christmas Wimsys, a Santa hat on the head: Wimsy herself (`tools/wimsy.svg`) and Aogo, whose hat sits
   toward the tip so her AO clip still shows. The hat keeps the style: its cone a red leaf whose tip droops back over
   the hair, the fur a white leaf lying along the head's upper edge (the arc of radius 330.77 through the centre and
   the tip, `edge()`), the pompom a white leaf at the tip. `dist/wimsy-xmas.svg`, `dist/wimsy-aogo-xmas.svg`, their
