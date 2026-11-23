@@ -75,6 +75,15 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   head, a fringe swept over the back eye in pointed locks, the other eye half shut and unimpressed under a raised brow,
   a `:3` mouth, pale lavender skin, a black tee with her studded choker as its trim, her bare lavender arms as the back
   wing, a white clip with XG, 47 on the arm. `dist/wimsy-xuji.svg` and `.png`. Not on the sheets: she is not a singer.
+- `tools/wimsy.svg`: Wimsy as Liz drew her, the bytes of ScarletNX's `dist/wimsy.svg`, the Christmas Wimsy's base.
+- `tools/make_xmas.py`: Christmas Wimsys. Wimsy herself in candy cane, as Liz asked: `tools/wimsy.svg` with her
+  upper wings red with white dots (the back one a darker red, as her teal is darker) and her head and the two leaves
+  below a candy cane's tilted red and white stripes; her eyes and white outlines as she drew them. Aogo in a Santa
+  hat, which keeps the style: its cone a red leaf whose tip droops back over the hair, the fur a white leaf lying along
+  the head's upper edge (the arc of radius 330.77 through the centre and the tip, `edge()`), a white pompom at the
+  tip, sitting toward the tip so her AO clip still shows. `dist/wimsy-xmas.svg`, `dist/wimsy-aogo-xmas.svg`, their
+  PNGs, and `dist/aogowimsy-avatar-xmas.png`, the AogoWimsy bot's avatar for the season, made as its usual one. Not
+  on the sheets: they are seasonal.
 - `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
   (its pink, purple and blue, the cyan of its mark; Eden's `dist/dev.eden_emu.eden.svg`) with a test probe, its needle
   out toward the drawing's empty lower right and its cable curling after it. `dist/wimsy-edenprobe.svg` and `.png`,
@@ -110,6 +119,7 @@ font (only for the names on the sheets).
     python3 -I make_accord.py
     python3 -I make_edenprobe.py
     python3 -I make_amberlith.py
+    python3 -I make_xmas.py
     sh publish.sh
 
 The generators write into `tools/out/`, and `publish.sh` copies from there into `dist/` and `emoji/`. Teto UTAU is

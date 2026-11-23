@@ -10,6 +10,7 @@ path = [
     "dist/wimsy-gumi.*", "dist/wimsy-yi-xi-*", "dist/wimsy-versions.png",
     "dist/wimsy-linux.*", "dist/wimsy-windows.*", "dist/wimsy-android.*", "dist/wimsy-macos.*", "dist/wimsy-ios.*",
     "dist/wimsy-aogo.*", "dist/wimsy-afugo.*", "dist/wimsy-asugo.*", "dist/wimsy-xuji.*", "dist/aogowimsy-avatar.png",
+    "dist/wimsy-aogo-xmas.*", "dist/aogowimsy-avatar-xmas.png",
     "emoji/**",
 ]
 SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
@@ -21,6 +22,7 @@ SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
 path = [
     "dist/wimsy-fuddles.*", "dist/wimsy-edenprobe.*", "dist/edenprobe-icon.*", "dist/wimsy-amberlith.*",
     "dist/amberlith-icon.*", "dist/wimsy-accord.*", "dist/accordwimsy-avatar.png", "tools/wimsy-teto.svg",
+    "tools/wimsy.svg", "dist/wimsy-xmas.*",
 ]
 SPDX-FileCopyrightText = ["Liz (Wimsy, ScarletNX's dist/wimsy.svg)", "2026 the wimsy-dist contributors"]
 SPDX-License-Identifier = "GPL-3.0-or-later"
