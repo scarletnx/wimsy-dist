@@ -126,21 +126,35 @@
    inkscape:window-y="27"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg7"
-   showguides="false" /><path
+   showguides="false" />  <defs>
+    <!-- Christmas: a candy cane's stripes, and white dots on red -->
+    <pattern id="xmas-cane" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(-40)">
+      <rect width="40" height="40" fill="#FFFFFF"/><rect width="20" height="40" fill="#E3202D"/>
+    </pattern>
+    <pattern id="xmas-dots-front" patternUnits="userSpaceOnUse" width="36" height="36" patternTransform="rotate(-20)">
+      <rect width="36" height="36" fill="#D71F2B"/>
+      <circle cx="9" cy="9" r="5.5" fill="#FFFFFF"/><circle cx="27" cy="27" r="5.5" fill="#FFFFFF"/>
+    </pattern>
+    <pattern id="xmas-dots-back" patternUnits="userSpaceOnUse" width="36" height="36" patternTransform="rotate(-20)">
+      <rect width="36" height="36" fill="#A8141F"/>
+      <circle cx="9" cy="9" r="5.5" fill="#FFFFFF"/><circle cx="27" cy="27" r="5.5" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+<path
    id="path1-4"
-   style="fill:#0c8694;fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:url(#xmas-dots-back);fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
    d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z" /><path
    id="path1-8-8"
-   style="fill:#11cea1;fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:url(#xmas-dots-front);fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
    d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z" /><path
    id="path1-8-8-6"
-   style="fill:#11ce87;fill-opacity:1;stroke:#ffffff;stroke-width:3.64433;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:url(#xmas-cane);fill-opacity:1;stroke:#ffffff;stroke-width:3.64433;stroke-dasharray:none;stroke-opacity:1"
    d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z" /><path
    id="path1-8-8-6-0"
-   style="fill:#11ce87;fill-opacity:1;stroke:#ffffff;stroke-width:3.64433;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:url(#xmas-cane);fill-opacity:1;stroke:#ffffff;stroke-width:3.64433;stroke-dasharray:none;stroke-opacity:1"
    d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z" /><path
    id="path1-8-4-0"
-   style="fill:#3ae8ef;fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:url(#xmas-cane);fill-opacity:1;stroke:#ffffff;stroke-width:5.47474;stroke-dasharray:none;stroke-opacity:1"
    d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z" /><circle
    style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:9.24596;stroke-dasharray:none;stroke-opacity:1"
    id="path2"
@@ -165,20 +179,4 @@
    cx="434.99091"
    cy="93.264442"
    transform="rotate(24.165289)"
-   r="16.677759" />  <!-- the Santa hat: a red leaf whose tip droops back, a white leaf of fur along the head's edge, a white
-       pompom at the tip -->
-  <g transform="translate(217.8,336.7) rotate(-26.68)">
-    <defs>
-      <linearGradient id="wimsy-hat-red" x1="0" y1="1" x2="0.4" y2="0">
-        <stop offset="0" stop-color="#EE3B43"/><stop offset="1" stop-color="#B21E2B"/>
-      </linearGradient>
-      <linearGradient id="wimsy-hat-fur" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E2EA"/>
-      </linearGradient>
-    </defs>
-    <path fill="url(#wimsy-hat-red)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round" d="M 286.0,-28.7 Q 256.0,-160.0 118.0,-120.0 Q 168.0,-92.3 164.0,-52.7 Q 225.0,-66.7 286.0,-28.7 Z"/>
-    <path fill="url(#wimsy-hat-fur)" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round" d="M 150.0,-39.4 Q 225.0,-104.8 300.0,-9.7 Q 225.0,-48.8 150.0,-39.4 Z"/>
-    <path fill="url(#wimsy-hat-fur)" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"
-          transform="translate(118.0,-120.0) rotate(-35)" d="M -19,0 Q 0,-27 19,0 Q 0,27 -19,0 Z"/>
-  </g>
-</svg>
+   r="16.677759" /></svg>

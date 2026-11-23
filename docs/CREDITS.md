@@ -54,7 +54,7 @@ The icons beside each download in ReiWimsy's cards.
 
 | Drawing | Inspired by | Licence |
 | --- | --- | --- |
-| `wimsy-xmas` | Wimsy, Liz's original (ScarletNX's `dist/wimsy.svg`), in a Santa hat | GPL-3.0-or-later |
+| `wimsy-xmas` | Wimsy, Liz's original (ScarletNX's `dist/wimsy.svg`), in candy cane as Liz asked: red wings with white dots, a striped head and leaves | GPL-3.0-or-later |
 | `wimsy-aogo-xmas`, `aogowimsy-avatar-xmas` | Aogo (AO55), from her drawing by Kedr (Kedr_bit on X), in a Santa hat | CC-BY-NC-SA-4.0 |
 
 ## Programs and places

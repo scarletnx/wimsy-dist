@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 the wimsy-dist contributors
-"""make_xmas.py: Christmas Wimsys, a Santa hat on the head: Wimsy herself (Liz's original, tools/wimsy.svg, the
-bytes of ScarletNX's dist/wimsy.svg) and Aogo (make_aogo.py's drawing). The hat keeps the style: its cone a red leaf whose tip droops back, the fur a white leaf
-lying along the head's upper edge (nothing runs across a leaf), the pompom a white leaf rolled round at the tip.
-Writes out/wimsy-xmas.svg and out/wimsy-aogo-xmas.svg."""
+"""make_xmas.py: Christmas Wimsys. Wimsy herself in candy cane: Liz's original (tools/wimsy.svg, the bytes of
+ScarletNX's dist/wimsy.svg) with, as Liz asked, her upper wings red with white dots and her head and the two leaves
+below a candy cane's tilted stripes. Aogo (make_aogo.py's drawing) in a Santa hat: its cone a red leaf whose tip
+droops back, the fur a white leaf along the head's upper edge (nothing runs across a leaf), a white pompom at the
+tip. Writes out/wimsy-xmas.svg and out/wimsy-aogo-xmas.svg."""
 import math
 import os
 import re
@@ -72,16 +73,56 @@ def hat(start=150, end=300, tip=(118, -120), uid="hat"):
 '''
 
 
+CANE = ("#E3202D", "#FFFFFF")  # a candy cane's red and white
+DOTS = {"front": "#D71F2B", "back": "#A8141F"}  # the upper wings' reds, the back one darker as Liz's teal is
+
+
+def xmas_defs():
+    """the patterns: a candy cane's tilted stripes, and white dots on red for each upper wing"""
+    def dots(pid, red):
+        return (f'    <pattern id="{pid}" patternUnits="userSpaceOnUse" width="36" height="36" '
+                f'patternTransform="rotate(-20)">\n'
+                f'      <rect width="36" height="36" fill="{red}"/>\n'
+                f'      <circle cx="9" cy="9" r="5.5" fill="#FFFFFF"/><circle cx="27" cy="27" r="5.5" fill="#FFFFFF"/>\n'
+                f'    </pattern>\n')
+    return ("  <defs>\n    <!-- Christmas: a candy cane's stripes, and white dots on red -->\n"
+            f'    <pattern id="xmas-cane" patternUnits="userSpaceOnUse" width="40" height="40" '
+            f'patternTransform="rotate(-40)">\n'
+            f'      <rect width="40" height="40" fill="{CANE[1]}"/><rect width="20" height="40" fill="{CANE[0]}"/>\n'
+            f'    </pattern>\n'
+            + dots("xmas-dots-front", DOTS["front"]) + dots("xmas-dots-back", DOTS["back"]) + "  </defs>\n")
+
+
+# Liz's leaves by their ids in tools/wimsy.svg, and the fill each takes at Christmas (Liz, 23/11: the upper wings red
+# with white dots, the head and the two leaves below a candy cane)
+XMAS_FILLS = {
+    "path1-4": "url(#xmas-dots-back)",  # the back upper wing
+    "path1-8-8": "url(#xmas-dots-front)",  # the front upper wing
+    "path1-8-8-6": "url(#xmas-cane)",  # the leaf below, to the left
+    "path1-8-8-6-0": "url(#xmas-cane)",  # the leaf below, downward
+    "path1-8-4-0": "url(#xmas-cane)",  # the head
+}
+
+
 def wimsy_xmas():
-    """Liz's Wimsy with the hat drawn over the head, last, so nothing covers it"""
+    """Liz's Wimsy in candy cane: each leaf's fill changed, the eyes and the white outlines as she drew them"""
     with open(os.path.join(HERE, "wimsy.svg"), encoding="utf-8") as f:
         svg = f.read()
     # Inkscape breaks the licence's tag over lines; licences.py stamps the one-line form
     svg, n = re.subn(r'<dc:license\s+rdf:resource="([^"]*)"\s*/>', r'<dc:license rdf:resource="\1"/>', svg)
     if n != 1:
         raise SystemExit(f"tools/wimsy.svg: {n} dc:license tags in its metadata, where make_xmas.py expects 1")
-    at = svg.rindex("</svg>")
-    return svg[:at] + hat(uid="wimsy-hat") + svg[at:]
+    for pid, fill in XMAS_FILLS.items():
+        element = re.search(r'<path\b[^>]*?\bid="' + re.escape(pid) + r'"[^>]*?/>', svg, re.S)
+        if not element:
+            raise SystemExit(f"tools/wimsy.svg: no path {pid}, which make_xmas.py colours")
+        old = element.group(0)
+        new, k = re.subn(r"fill:#[0-9a-fA-F]{6}", f"fill:{fill}", old, count=1)
+        if k != 1:
+            raise SystemExit(f"tools/wimsy.svg: path {pid} has no fill:#rrggbb in its style to change")
+        svg = svg.replace(old, new, 1)
+    at = svg.index("<path")
+    return svg[:at] + xmas_defs() + svg[at:]
 
 
 def aogo_xmas():

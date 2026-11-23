@@ -76,10 +76,12 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   a `:3` mouth, pale lavender skin, a black tee with her studded choker as its trim, her bare lavender arms as the back
   wing, a white clip with XG, 47 on the arm. `dist/wimsy-xuji.svg` and `.png`. Not on the sheets: she is not a singer.
 - `tools/wimsy.svg`: Wimsy as Liz drew her, the bytes of ScarletNX's `dist/wimsy.svg`, the Christmas Wimsy's base.
-- `tools/make_xmas.py`: Christmas Wimsys, a Santa hat on the head: Wimsy herself (`tools/wimsy.svg`) and Aogo, whose hat sits
-  toward the tip so her AO clip still shows. The hat keeps the style: its cone a red leaf whose tip droops back over
-  the hair, the fur a white leaf lying along the head's upper edge (the arc of radius 330.77 through the centre and
-  the tip, `edge()`), the pompom a white leaf at the tip. `dist/wimsy-xmas.svg`, `dist/wimsy-aogo-xmas.svg`, their
+- `tools/make_xmas.py`: Christmas Wimsys. Wimsy herself in candy cane, as Liz asked: `tools/wimsy.svg` with her
+  upper wings red with white dots (the back one a darker red, as her teal is darker) and her head and the two leaves
+  below a candy cane's tilted red and white stripes; her eyes and white outlines as she drew them. Aogo in a Santa
+  hat, which keeps the style: its cone a red leaf whose tip droops back over the hair, the fur a white leaf lying along
+  the head's upper edge (the arc of radius 330.77 through the centre and the tip, `edge()`), a white pompom at the
+  tip, sitting toward the tip so her AO clip still shows. `dist/wimsy-xmas.svg`, `dist/wimsy-aogo-xmas.svg`, their
   PNGs, and `dist/aogowimsy-avatar-xmas.png`, the AogoWimsy bot's avatar for the season, made as its usual one. Not
   on the sheets: they are seasonal.
 - `tools/make_edenprobe.py`: edenprobe, the test program ScarletNX and rEden are held to, in Eden's sunset colours
