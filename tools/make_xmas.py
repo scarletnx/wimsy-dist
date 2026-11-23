@@ -77,52 +77,59 @@ CANE = ("#E3202D", "#FFFFFF")  # a candy cane's red and white
 DOTS = {"front": "#D71F2B", "back": "#A8141F"}  # the upper wings' reds, the back one darker as Liz's teal is
 
 
-def xmas_defs():
-    """the patterns: a candy cane's tilted stripes, and white dots on red for each upper wing"""
-    def dots(pid, red):
-        return (f'    <pattern id="{pid}" patternUnits="userSpaceOnUse" width="36" height="36" '
-                f'patternTransform="rotate(-20)">\n'
-                f'      <rect width="36" height="36" fill="{red}"/>\n'
-                f'      <circle cx="9" cy="9" r="5.5" fill="#FFFFFF"/><circle cx="27" cy="27" r="5.5" fill="#FFFFFF"/>\n'
-                f'    </pattern>\n')
-    return ("  <defs>\n    <!-- Christmas: a candy cane's stripes, and white dots on red -->\n"
-            f'    <pattern id="xmas-cane" patternUnits="userSpaceOnUse" width="40" height="40" '
-            f'patternTransform="rotate(-40)">\n'
-            f'      <rect width="40" height="40" fill="{CANE[1]}"/><rect width="20" height="40" fill="{CANE[0]}"/>\n'
-            f'    </pattern>\n'
-            + dots("xmas-dots-front", DOTS["front"]) + dots("xmas-dots-back", DOTS["back"]) + "  </defs>\n")
+def stripes():
+    """a candy cane's red stripes, tilted, across the whole page: drawn over a white leaf and cut to it"""
+    bands = "".join(f'<rect x="{x}" y="-400" width="20" height="1400" fill="{CANE[0]}"/>' for x in range(-440, 960, 40))
+    return f'<g transform="rotate(-40 256 256)">{bands}</g>'
 
 
-# Liz's leaves by their ids in tools/wimsy.svg, and the fill each takes at Christmas (Liz, 23/11: the upper wings red
-# with white dots, the head and the two leaves below a candy cane)
-XMAS_FILLS = {
-    "path1-4": "url(#xmas-dots-back)",  # the back upper wing
-    "path1-8-8": "url(#xmas-dots-front)",  # the front upper wing
-    "path1-8-8-6": "url(#xmas-cane)",  # the leaf below, to the left
-    "path1-8-8-6-0": "url(#xmas-cane)",  # the leaf below, downward
-    "path1-8-4-0": "url(#xmas-cane)",  # the head
+def dots():
+    """white dots on a grid, turned a little, across the whole page: drawn over a red leaf and cut to it"""
+    spots = "".join(f'<circle cx="{x + (18 if (y // 36) % 2 else 0)}" cy="{y}" r="5.5" fill="#FFFFFF"/>'
+                    for y in range(-360, 900, 36) for x in range(-360, 900, 36))
+    return f'<g transform="rotate(-20 256 256)">{spots}</g>'
+
+
+# Liz's leaves by their ids in tools/wimsy.svg: what each takes at Christmas (Liz, 23/11: the upper wings red with
+# white dots, the head and the two leaves below a candy cane), as (the leaf's own fill, what is drawn over it)
+XMAS_LEAVES = {
+    "path1-4": (DOTS["back"], dots),  # the back upper wing
+    "path1-8-8": (DOTS["front"], dots),  # the front upper wing
+    "path1-8-8-6": (CANE[1], stripes),  # the leaf below, to the left
+    "path1-8-8-6-0": (CANE[1], stripes),  # the leaf below, downward
+    "path1-8-4-0": (CANE[1], stripes),  # the head
 }
 
 
 def wimsy_xmas():
-    """Liz's Wimsy in candy cane: each leaf's fill changed, the eyes and the white outlines as she drew them"""
+    """Liz's Wimsy in candy cane. Each leaf keeps one solid fill (white under the stripes, red under the dots); its
+    stripes or dots are shapes cut to the leaf by a clipPath of its own outline, and its white outline is drawn again
+    over them. No <pattern>: a renderer blends a pattern's tile seams, and the drawing has to stay opaque at every
+    size as Wimsy is (ScarletNX's tests/splash.c checks that)"""
     with open(os.path.join(HERE, "wimsy.svg"), encoding="utf-8") as f:
         svg = f.read()
     # Inkscape breaks the licence's tag over lines; licences.py stamps the one-line form
     svg, n = re.subn(r'<dc:license\s+rdf:resource="([^"]*)"\s*/>', r'<dc:license rdf:resource="\1"/>', svg)
     if n != 1:
         raise SystemExit(f"tools/wimsy.svg: {n} dc:license tags in its metadata, where make_xmas.py expects 1")
-    for pid, fill in XMAS_FILLS.items():
+    for pid, (base, over) in XMAS_LEAVES.items():
         element = re.search(r'<path\b[^>]*?\bid="' + re.escape(pid) + r'"[^>]*?/>', svg, re.S)
         if not element:
             raise SystemExit(f"tools/wimsy.svg: no path {pid}, which make_xmas.py colours")
         old = element.group(0)
-        new, k = re.subn(r"fill:#[0-9a-fA-F]{6}", f"fill:{fill}", old, count=1)
+        d = re.search(r'\bd="([^"]*)"', old)
+        width = re.search(r"stroke-width:([0-9.]+)", old)
+        if not d or not width:
+            raise SystemExit(f"tools/wimsy.svg: path {pid} has no d or no stroke-width in its style")
+        new, k = re.subn(r"fill:#[0-9a-fA-F]{6}", f"fill:{base}", old, count=1)
         if k != 1:
             raise SystemExit(f"tools/wimsy.svg: path {pid} has no fill:#rrggbb in its style to change")
-        svg = svg.replace(old, new, 1)
-    at = svg.index("<path")
-    return svg[:at] + xmas_defs() + svg[at:]
+        cut = f"xmas-cut-{pid}"
+        svg = svg.replace(old, new
+                          + f'<clipPath id="{cut}"><path d="{d.group(1)}"/></clipPath>'
+                          + f'<g clip-path="url(#{cut})">{over()}</g>'
+                          + f'<path d="{d.group(1)}" fill="none" stroke="#ffffff" stroke-width="{width.group(1)}"/>', 1)
+    return svg
 
 
 def aogo_xmas():
