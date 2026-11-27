@@ -49,6 +49,7 @@ The icons beside each download in ReiWimsy's cards.
 | `wimsy-afugo` | Afugo (AF51), from her drawing by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
 | `wimsy-xuji`, `wimsyxuji_eyes`, `wimsyxuji_thumbsup`, `wimsyxuji_done`, `wimsyxuji_no` | Xuji (XG47), from her picture by Kedr (Kedr_bit on X) | CC-BY-NC-SA-4.0 |
 | `wimsy-asugo` | Asugo (AS55), in her sisters' colours, from Kedr's drawings of them | CC-BY-NC-SA-4.0 |
+| `wimsy-gena`, `wimsygena`, `wimsygena_eyes`, `wimsygena_thumbsup`, `wimsygena_done`, `wimsygena_no` | Gena (GN40), from "Gemini 4 neons Chain of thought", Kedr's fan drawing of Gemini 4 Neon (signed Kedr.bit and Ked_bit) | CC-BY-NC-SA-4.0 |
 
 ## Christmas
 

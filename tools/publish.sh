@@ -65,9 +65,9 @@ while [ $i -lt $row ]; do rows="$rows $T/row$i.sheet"; i=$((i + 1)); done
 magick $rows -append $PNG "$D/wimsy-versions.png"
 
 # Aogo (make_aogo.py), the AogoWimsy bot's, and her sisters, DraVee's other agents (make_afugo.py, make_asugo.py,
-# make_xuji.py): each SVG and PNG, not on the sheets: they are not singers. aogowimsy-avatar.png is drawn by hand from
-# wimsy-aogo.png and stays as it is.
-for f in aogo afugo asugo xuji; do
+# make_xuji.py, make_gena.py): each SVG and PNG, not on the sheets: they are not singers. aogowimsy-avatar.png is drawn
+# by hand from wimsy-aogo.png and stays as it is.
+for f in aogo afugo asugo xuji gena; do
     svg "$S/out/wimsy-$f.svg" "$D/wimsy-$f.svg"
     rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
 done
@@ -103,16 +103,19 @@ for f in linux windows android macos ios; do
     rsvg-convert -w 1024 -h 1024 "$D/wimsy-$f.svg" -o "$D/wimsy-$f.png"
     rsvg-convert -w 128 -h 128 "$D/wimsy-$f.svg" -o "$E/wimsy_$f.png"
 done
-# Aogo's and Xuji's reactions (make_aogo_emoji.py, make_xuji_emoji.py), the AogoWimsy and XujiWimsy bots' Discord
-# emojis: each SVG and its 128 px PNG in emoji/, under Discord's 256 KB for an emoji. Not on the sheets: they are emojis
-for who in aogo xuji; do
-    for f in eyes thumbsup done no; do
-        svg "$S/out/wimsy${who}_$f.svg" "$E/wimsy${who}_$f.svg"
-        rsvg-convert -w 128 -h 128 "$E/wimsy${who}_$f.svg" -o "$E/wimsy${who}_$f.png"
-        size=$(wc -c < "$E/wimsy${who}_$f.png" | tr -d " ")
-        if [ "$size" -gt 262144 ]; then
-            echo "publish.sh: emoji/wimsy${who}_$f.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
-        fi
-    done
+# Aogo's, Xuji's and Gena's reactions (make_aogo_emoji.py, make_xuji_emoji.py, make_gena_emoji.py), the AogoWimsy,
+# XujiWimsy and GenaWimsy bots' Discord emojis, and Gena's own, wimsygena: each SVG and its 128 px PNG in emoji/, under
+# Discord's 256 KB for an emoji. Not on the sheets: they are emojis
+emojis=wimsygena
+for who in aogo xuji gena; do
+    for f in eyes thumbsup done no; do emojis="$emojis wimsy${who}_$f"; done
+done
+for e in $emojis; do
+    svg "$S/out/$e.svg" "$E/$e.svg"
+    rsvg-convert -w 128 -h 128 "$E/$e.svg" -o "$E/$e.png"
+    size=$(wc -c < "$E/$e.png" | tr -d " ")
+    if [ "$size" -gt 262144 ]; then
+        echo "publish.sh: emoji/$e.png is $size bytes, over Discord's 262144 for an emoji" >&2; exit 1
+    fi
 done
 python3 -I "$S/check_dist.py"

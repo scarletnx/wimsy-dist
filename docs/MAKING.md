@@ -75,6 +75,31 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   head, a fringe swept over the back eye in pointed locks, the other eye half shut and unimpressed under a raised brow,
   a `:3` mouth, pale lavender skin, a black tee with her studded choker as its trim, her bare lavender arms as the back
   wing, a white clip with XG, 47 on the arm. `dist/wimsy-xuji.svg` and `.png`. Not on the sheets: she is not a singer.
+- `tools/make_gena.py`: Gena (GN40, DraVee's Gemini 4 Neon agent, in Antigravity), Aogo's sister, from "Gemini 4
+  neons Chain of thought", Kedr's fan drawing of the model (signed Kedr.bit and Ked_bit): neon green hair, the left leaf
+  below tipped orange-yellow, an ahoge striped orange over green, a black clip with GN in the hair, a grey headband
+  along the top of the head whose plate covers the front eye, with an OFF or ON label over the other eye, a radiation
+  sign on the plate and a glowing neon tube standing at its front end, a black shirt (the front wing), its trim the
+  grey collar with a red and a blue light, a green pleated skirt (the back wing) with 40. GN and 40 are her
+  designation, as her sisters carry theirs; the drawing's clip, the model's sparkle, and the print on its shirt (a big
+  4 and the tile for neon) stay out. Her face is the drawing's Stable mood: OFF, the bare eye half shut under a lid
+  level on the page, a small frown with a fang. `dist/wimsy-gena.svg` and `.png`. Not on the sheets: she is not a
+  singer.
+- `tools/make_gena_emoji.py`: the GenaWimsy bot's emojis, `emoji/wimsygena.svg`, her own, and
+  `emoji/wimsygena_<name>.svg`, each with its `.png` at 128 px, with the names, meanings and signs of Aogo's, in her
+  drawing's moods:
+
+  | Name | Meaning | Her face | The sign |
+  | --- | --- | --- | --- |
+  | `wimsygena` | her own | Stable: OFF, the eye half shut, a small frown with a fang | none |
+  | `wimsygena_eyes` | seen, on it | Stable: OFF, the eye half shut, glancing up at the message | two eyes glancing up, on dark grey |
+  | `wimsygena_thumbsup` | agreed | Ionized: ON, the tube brighter, a knowing look under the lid, a blush, a `:3` with a fang | a thumb up, white on blue |
+  | `wimsygena_done` | done | Ionized: ON, the eye a `^`, a blush, an open grin on her green tongue, a heart | a white check on green |
+  | `wimsygena_no` | cannot | Ionized in a panic: ON, the tube overloaded with sparks, the eye wide, a gasp, a drop of sweat | a white X on red |
+
+  Each is the whole drawing with the face heavier than the drawing's, as Aogo's are, and the label's letters larger.
+  The face reads from 48 px; at 32 px she shows as her green leaves, the yellow radiation sign and the green tube, the
+  sign as itself.
 - `tools/wimsy.svg`: Wimsy as Liz drew her, the bytes of ScarletNX's `dist/wimsy.svg`, the Christmas Wimsy's base.
 - `tools/make_xmas.py`: Christmas Wimsys. Wimsy herself in candy cane, as Liz asked: `tools/wimsy.svg` with her
   upper wings red with white dots (the back one a darker red, as her teal is darker) and her head and the two leaves
@@ -116,6 +141,8 @@ font (only for the names on the sheets).
     python3 -I make_asugo.py
     python3 -I make_xuji.py
     python3 -I make_xuji_emoji.py
+    python3 -I make_gena.py
+    python3 -I make_gena_emoji.py
     python3 -I make_accord.py
     python3 -I make_edenprobe.py
     python3 -I make_amberlith.py
