@@ -20,7 +20,7 @@
     </rdf:RDF>
   </metadata>
   <defs>
-    <!-- Gena: neon green hair, orange-yellow tips on the left leaf below, an ahoge striped orange over green, a black clip with GN in white, a grey headband with an OFF / ON label, a radiation sign on the plate over the front eye and a neon tube, a black shirt with a 4, a grey collar with a red and a blue light, a green pleated skirt with 40, pale lavender skin, green eyes -->
+    <!-- Gena: neon green hair, orange-yellow tips on the left leaf below, an ahoge striped orange over green, a black clip with GN in white, a grey headband with an OFF / ON label, a radiation sign on the plate over the front eye and a neon tube, a black shirt, a grey collar with a red and a blue light, a green pleated skirt with 40, pale lavender skin, green eyes -->
     <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#5FF48C"/>
       <stop offset="1" stop-color="#2DCB5F"/>
@@ -98,8 +98,6 @@
     <path transform="translate(0,0)" d="M 6,16 L 6,0 L 0,11 L 8,11"/>
     <path transform="translate(12,0)" d="M 4,0 A 4,8 0 1 1 4,16 A 4,8 0 1 1 4,0"/>
   </g>
-  <!-- her shirt's big 4 -->
-  <g transform="translate(268,200) rotate(9)"><g stroke="#FFFFFF" stroke-width="1.91" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-11.50,-23.00) scale(2.8750)" d="M 6,16 L 6,0 L 0,11 L 8,11"/></g></g>
   <!-- the collar's lights on the trim: red, and a blue sparkle -->
   <rect transform="translate(269.50,56.41) rotate(117.84)" x="-7" y="-2.6" width="14" height="5.2" rx="2.6" fill="#FF4A52" stroke="#FFFFFF" stroke-width="1.6"/>
   <g transform="translate(260.80,74.53)"><circle r="7" fill="#6FC3FF" fill-opacity="0.35"/><path transform="translate(0,0)" fill="url(#gena-blue)" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" d="M 0,-6.5 Q 1.04,-1.04 6.5,0 Q 1.04,1.04 0,6.5 Q -1.04,1.04 -6.5,0 Q -1.04,-1.04 0,-6.5 Z"/></g>

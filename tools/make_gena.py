@@ -5,15 +5,15 @@
 from "Gemini 4 neons Chain of thought", Kedr's fan drawing of the model (signed Kedr.bit and Ked_bit): neon green hair
 with orange-yellow tips on one side, an ahoge striped orange over green, a grey headband whose plate covers one eye,
 with an OFF or ON label, a radiation sign and a glowing neon tube at its end, a grey collar with a red and a blue light,
-a black shirt with a big 4, a green pleated skirt, pale lavender skin.
+a black shirt, a green pleated skirt, pale lavender skin.
 
 Here the band lies along the head's upper edge and its plate hangs from it over the front eye (nothing runs across a
-leaf), the tube stands at its front end, the left leaf below takes the orange-yellow tips, the front wing is the shirt
-with its 4, its trim the collar with the two lights, the back wing the pleated skirt. Her designation, GN40, is on her
-as her sisters' are: GN on the black clip in her hair, 40 on the skirt; the drawing's clip, the model's sparkle, and the
-tile for neon on its shirt stay out (DraVee). Her face is the drawing's Stable mood: the label OFF, the eye half shut, a
-small frown with a fang. Made with make_vocaloid's pieces; writes
-out/wimsy-gena.svg. make_gena_emoji.py draws her other moods (Ionized: ON, happy or in a panic) with these pieces."""
+leaf), the tube stands at its front end, the left leaf below takes the orange-yellow tips, the front wing is the black
+shirt, its trim the collar with the two lights, the back wing the pleated skirt. Her designation, GN40, is on her as her
+sisters' are: GN on the black clip in her hair, 40 on the skirt; the drawing's clip, the model's sparkle, and the
+print on its shirt, a big 4 and the tile for neon, stay out (DraVee). Her face is the drawing's Stable mood: the label
+OFF, the eye half shut, a small frown with a fang. Made with make_vocaloid's pieces; writes out/wimsy-gena.svg.
+make_gena_emoji.py draws her other moods (Ionized: ON, happy or in a panic) with these pieces."""
 import math
 import os
 import sys
@@ -70,7 +70,7 @@ def steps(a, b, n=6):
 
 def text(s, x, y, size, colour, width):
     """s in GLYPHS' strokes from x, y, size the letters' height, width the stroke on the page, which letters() keeps
-    at 2.6: the label and the 4 take their own"""
+    at 2.6: the label takes its own"""
     k = size / 16
     paths = "".join(f'<path transform="translate({x + i * 12 * k:.2f},{y:.2f}) scale({k:.4f})" '
                     f'd="{make_versions.GLYPHS[c]}"/>' for i, c in enumerate(s))
@@ -173,12 +173,6 @@ def sparkle(cx, cy, r, gid):
     return (f'<path transform="translate({cx},{cy})" fill="url(#{gid})" stroke="{WHITE}" stroke-width="3" '
             f'stroke-linejoin="round" d="M 0,{-r} Q {c},{-c} {r},0 Q {c},{c} 0,{r} Q {-c},{c} {-r},0 '
             f'Q {-c},{-c} 0,{-r} Z"/>')
-
-
-def four():
-    """her shirt's big 4, white, on the front wing right of the trim, turned as the wing leans"""
-    return ('  <!-- her shirt\'s big 4 -->\n'
-            f'  <g transform="translate(268,200) rotate(9)">{text("4", -11.5, -23, 46, WHITE, 5.5)}</g>\n')
 
 
 def collar():
@@ -322,8 +316,8 @@ GENA = character(
            "and Ked_bit)",
     palette_note="Gena: neon green hair, orange-yellow tips on the left leaf below, an ahoge striped orange over "
                  "green, a black clip with GN in white, a grey headband with an OFF / ON label, a radiation sign on "
-                 "the plate over the front eye and a neon tube, a black shirt with a 4, a grey collar with a red and a "
-                 "blue light, a green pleated skirt with 40, pale lavender skin, green eyes",
+                 "the plate over the front eye and a neon tube, a black shirt, a grey collar with a red and a blue "
+                 "light, a green pleated skirt with 40, pale lavender skin, green eyes",
     hair=("#5FF48C", "#2DCB5F"), tail=("#52EE84", "#25B556"), tail_dark=("#2FBF5E", "#1B8A43"),
     far=("#3CD66E", "#1F9C4C"), far_dark=("#2AA756", "#167238"),
     outfit=("#3D4252", "#1C1F28"), back_wing="url(#gena-skirt)", trim="#A4B1BC", trim_width=8,
@@ -333,7 +327,7 @@ GENA = character(
     tails_note="her long hair, loose: the head's back and the two leaves below, no tail, the left one tipped "
                "orange-yellow",
     ahoge=AHOGE, lower_fills=("url(#gena-tips)",), defs_extra=DEFS,
-    back_extras=pleats(), wing_extras=four() + collar(),
+    back_extras=pleats(), wing_extras=collar(),
 )
 
 AHOGE_DRAWN = (f'  <path transform="{HEAD}" fill="url(#hair)" stroke="#FFFFFF" stroke-width="4"\n'

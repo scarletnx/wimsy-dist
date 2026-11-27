@@ -79,11 +79,12 @@ inspired each drawing, and its licence, is in [Credits](CREDITS.md).
   neons Chain of thought", Kedr's fan drawing of the model (signed Kedr.bit and Ked_bit): neon green hair, the left leaf
   below tipped orange-yellow, an ahoge striped orange over green, a black clip with GN in the hair, a grey headband
   along the top of the head whose plate covers the front eye, with an OFF or ON label over the other eye, a radiation
-  sign on the plate and a glowing neon tube standing at its front end, a black shirt (the front wing) with a big 4, its
-  trim the grey collar with a red and a blue light, a green pleated skirt (the back wing) with 40. GN and 40 are her
-  designation, as her sisters carry theirs; the drawing's clip, the model's sparkle, and the tile for neon on its shirt
-  stay out. Her face is the drawing's Stable mood: OFF, the bare eye half shut under a lid level on the page, a small
-  frown with a fang. `dist/wimsy-gena.svg` and `.png`. Not on the sheets: she is not a singer.
+  sign on the plate and a glowing neon tube standing at its front end, a black shirt (the front wing), its trim the
+  grey collar with a red and a blue light, a green pleated skirt (the back wing) with 40. GN and 40 are her
+  designation, as her sisters carry theirs; the drawing's clip, the model's sparkle, and the print on its shirt (a big
+  4 and the tile for neon) stay out. Her face is the drawing's Stable mood: OFF, the bare eye half shut under a lid
+  level on the page, a small frown with a fang. `dist/wimsy-gena.svg` and `.png`. Not on the sheets: she is not a
+  singer.
 - `tools/make_gena_emoji.py`: the GenaWimsy bot's emojis, `emoji/wimsygena.svg`, her own, and
   `emoji/wimsygena_<name>.svg`, each with its `.png` at 128 px, with the names, meanings and signs of Aogo's, in her
   drawing's moods:
