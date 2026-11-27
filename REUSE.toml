@@ -9,7 +9,8 @@ path = [
     "dist/wimsy-teto-*", "dist/wimsy-miku.*", "dist/wimsy-neru.*", "dist/wimsy-defoko.*", "dist/wimsy-adachi-rei-*",
     "dist/wimsy-gumi.*", "dist/wimsy-yi-xi-*", "dist/wimsy-versions.png",
     "dist/wimsy-linux.*", "dist/wimsy-windows.*", "dist/wimsy-android.*", "dist/wimsy-macos.*", "dist/wimsy-ios.*",
-    "dist/wimsy-aogo.*", "dist/wimsy-afugo.*", "dist/wimsy-asugo.*", "dist/wimsy-xuji.*", "dist/aogowimsy-avatar.png",
+    "dist/wimsy-aogo.*", "dist/wimsy-afugo.*", "dist/wimsy-asugo.*", "dist/wimsy-xuji.*", "dist/wimsy-gena.*",
+    "dist/aogowimsy-avatar.png",
     "dist/wimsy-aogo-xmas.*", "dist/aogowimsy-avatar-xmas.png",
     "emoji/**",
 ]

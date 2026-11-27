@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: Liz (Wimsy, ScarletNX's dist/wimsy.svg) -->
+<!-- SPDX-FileCopyrightText: 2026 the wimsy-dist contributors -->
+<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+<!-- wimsygena_eyes, a Discord emoji: the GenaWimsy bot's reaction for seen, on it -->
+<!-- Wimsy (Liz, ScarletNX's dist/wimsy.svg, GPL-3.0-or-later) with Gena's neon green hair, a clip and a headband with a neon tube and colours.
+     The leaves keep Wimsy's own shapes; colours from Kedr's fan drawing of Gemini 4 Neon, "Gemini 4 neons Chain of thought" (signed Kedr.bit and Ked_bit); fan art. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"
+     viewBox="0 0 512 512" fill="none">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cc:Work rdf:about="">
+        <dc:title>wimsygena_eyes: Wimsy as Gena, the GenaWimsy bot's reaction for seen, on it</dc:title>
+        <dc:creator><cc:Agent><dc:title>Liz (Wimsy)</dc:title></cc:Agent></dc:creator>
+        <dc:contributor><cc:Agent><dc:title>AO55 (neon green hair, a clip and a headband with a neon tube, Gena's colours)</dc:title></cc:Agent></dc:contributor>
+        <dc:license rdf:resource="https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"/>
+        <dc:source>https://github.com/scarletnx/ScarletNX/blob/main/dist/wimsy.svg</dc:source>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <!-- Gena: neon green hair, orange-yellow tips on the left leaf below, an ahoge striped orange over green, a black clip with GN in white, a grey headband with an OFF / ON label, a radiation sign on the plate over the front eye and a neon tube, a black shirt with a 4, a grey collar with a red and a blue light, a green pleated skirt with 40, pale lavender skin, green eyes -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5FF48C"/>
+      <stop offset="1" stop-color="#2DCB5F"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52EE84"/>
+      <stop offset="1" stop-color="#25B556"/>
+    </linearGradient>
+    <linearGradient id="tail-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2FBF5E"/>
+      <stop offset="1" stop-color="#1B8A43"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3CD66E"/>
+      <stop offset="1" stop-color="#1F9C4C"/>
+    </linearGradient>
+    <linearGradient id="far-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2AA756"/>
+      <stop offset="1" stop-color="#167238"/>
+    </linearGradient>
+    <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D4252"/>
+      <stop offset="1" stop-color="#1C1F28"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F4F5"/>
+      <stop offset="1" stop-color="#D3CCCF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E8DAE8"/>
+      <stop offset="1" stop-color="#F8F2F8"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#B4FFC8"/>
+      <stop offset="0.7" stop-color="#33CF62"/>
+      <stop offset="1" stop-color="#10692E"/>
+    </radialGradient>
+    <!-- Wimsy's head, as the original draws it -->
+    <path id="head" d="M 508.04553,190.77006 A 330.76661,330.76661 0 0 0 355.34995,220.08038 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 382.15852,323.1017 244.08293,244.08293 0 0 0 508.04553,190.77006 Z"/>
+    <clipPath id="head-clip"><use xlink:href="#head"/></clipPath>
+
+    <!-- a drill pointing down from its tie at 0,0, drawn as Wimsy's leaves are: each turn of the ringlet a leaf of two
+         arcs with a white edge, slanted as a helix winds, the turns narrowing to a curled tip, nothing between one turn and the next -->
+    <!-- her long hair, loose: the head's back and the two leaves below, no tail, the left one tipped orange-yellow -->
+    <linearGradient id="gena-steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BCC8D2"/><stop offset="1" stop-color="#7D8D99"/></linearGradient>
+    <linearGradient id="gena-neon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#18B552"/><stop offset="0.25" stop-color="#52F587"/><stop offset="0.5" stop-color="#E2FFEC"/><stop offset="0.75" stop-color="#52F587"/><stop offset="1" stop-color="#18B552"/></linearGradient>
+    <linearGradient id="gena-tips" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFB62E"/><stop offset="0.25" stop-color="#FFCB4A"/><stop offset="0.5" stop-color="#7FEA6E"/><stop offset="0.75" stop-color="#4CEA80"/><stop offset="1" stop-color="#2FC665"/></linearGradient>
+    <linearGradient id="gena-ahoge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#62F28E"/><stop offset="1" stop-color="#2CC95E"/></linearGradient>
+    <linearGradient id="gena-skirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#74DE86"/><stop offset="1" stop-color="#3FA457"/></linearGradient>
+    <linearGradient id="gena-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE6FF"/><stop offset="1" stop-color="#4FA8F5"/></linearGradient>
+  </defs>
+
+
+  <!-- Gena's curl on top of the head, its root under it -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)">
+    <path fill="url(#gena-ahoge)" d="M 150,-30 C 140,-106 202,-150 278,-128 C 226,-126 188,-100 172,-30 Z"/>
+    <path fill="#FFB62E" d="M 150,-30 C 140,-106 202,-150 278,-128 C 234,-134 174,-114 160,-30 Z"/>
+    <path fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" d="M 150,-30 C 140,-106 202,-150 278,-128 C 226,-126 188,-100 172,-30 Z"/>
+  </g>
+
+  <!-- the wings in the outfit's grey -->
+  <path fill="url(#gena-skirt)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/>
+  <!-- the skirt's pleats on the back wing, under the front wing -->
+  <clipPath id="gena-skirt-clip"><path d="M 192.28931,12.793038 A 330.76661,330.76661 0 0 0 161.77932,165.25345 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 267.29749,179.3252 244.08293,244.08293 0 0 0 192.28931,12.793038 Z"/></clipPath>
+  <g clip-path="url(#gena-skirt-clip)" fill="none" stroke-linecap="round"><path d="M 180,40 C 166,120 166,220 200,322" stroke="#2E8044" stroke-width="2.4" stroke-opacity="0.55"/><path d="M 194,34 C 184,120 186,222 210,322" stroke="#2E8044" stroke-width="2.4" stroke-opacity="0.55"/><path d="M 207,48 C 204,120 208,220 216,322" stroke="#2E8044" stroke-width="2.4" stroke-opacity="0.55"/><path transform="translate(3.2,0)" d="M 180,40 C 166,120 166,220 200,322" stroke="#B5F5C0" stroke-width="1.6" stroke-opacity="0.55"/><path transform="translate(3.2,0)" d="M 194,34 C 184,120 186,222 210,322" stroke="#B5F5C0" stroke-width="1.6" stroke-opacity="0.55"/><path transform="translate(3.2,0)" d="M 207,48 C 204,120 208,220 216,322" stroke="#B5F5C0" stroke-width="1.6" stroke-opacity="0.55"/></g>
+  <path fill="url(#outfit)" stroke="#FFFFFF" stroke-width="5.47474"
+        d="M 283.32464,18.471579 A 330.76661,330.76661 0 0 0 211.63417,156.44085 330.76661,330.76661 0 0 0 217.7827,336.65055 244.08293,244.08293 0 0 0 309.08124,199.29137 244.08293,244.08293 0 0 0 283.32464,18.471579 Z"/>
+  <!-- the outfit's grey collar trim along the front wing -->
+  <path fill="none" stroke="#A4B1BC" stroke-width="8" stroke-linecap="round"
+        d="M 279,40 C 246,92 226,170 224,300"/>
+
+  <!-- the mark on her arm -->
+  <g transform="rotate(-8 192 100) translate(186,92)" stroke="#173F25" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path transform="translate(0,0)" d="M 6,16 L 6,0 L 0,11 L 8,11"/>
+    <path transform="translate(12,0)" d="M 4,0 A 4,8 0 1 1 4,16 A 4,8 0 1 1 4,0"/>
+  </g>
+  <!-- her shirt's big 4 -->
+  <g transform="translate(268,200) rotate(9)"><g stroke="#FFFFFF" stroke-width="1.91" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-11.50,-23.00) scale(2.8750)" d="M 6,16 L 6,0 L 0,11 L 8,11"/></g></g>
+  <!-- the collar's lights on the trim: red, and a blue sparkle -->
+  <rect transform="translate(269.50,56.41) rotate(117.84)" x="-7" y="-2.6" width="14" height="5.2" rx="2.6" fill="#FF4A52" stroke="#FFFFFF" stroke-width="1.6"/>
+  <g transform="translate(260.80,74.53)"><circle r="7" fill="#6FC3FF" fill-opacity="0.35"/><path transform="translate(0,0)" fill="url(#gena-blue)" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" d="M 0,-6.5 Q 1.04,-1.04 6.5,0 Q 1.04,1.04 0,6.5 Q -1.04,1.04 -6.5,0 Q -1.04,-1.04 0,-6.5 Z"/></g>
+  <!-- the two leaves below, in the hair's neon green -->
+  <path fill="url(#gena-tips)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 3.1326032,310.41929 A 220.1792,220.1792 0 0 0 98.555722,350.50134 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.7011,283.52647 162.47705,162.47705 0 0 0 3.1326032,310.41929 Z"/>
+  <path fill="url(#tail)" stroke="#FFFFFF" stroke-width="3.64433"
+        d="M 80.650839,503.85583 A 220.1792,220.1792 0 0 0 165.61247,444.74858 220.1792,220.1792 0 0 0 217.7827,336.65055 162.47705,162.47705 0 0 0 121.45529,389.32762 162.47705,162.47705 0 0 0 80.650839,503.85583 Z"/>
+
+  <!-- the head: a face, the hair over its back and its top in bangs, a blush -->
+  <use xlink:href="#head" fill="url(#skin)"/>
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(217.8,336.7) rotate(-26.68)">
+      <path fill="url(#hair)"
+            d="M -40,-200 L 340,-200 L 340,-40 L 300,-36 L 274,-8 L 258,-32 L 222,-28 L 194,-4 L 178,-30 L 134,-28 L 114,28 L 102,90 L -40,90 Z"/>
+      <path fill="none" stroke="#C2FFD6" stroke-width="4" stroke-linecap="round" stroke-opacity="0.85"
+            d="M 40,-30 C 70,-40 110,-44 150,-40"/>
+      <ellipse cx="160" cy="34" rx="15" ry="7" fill="#F28C9C" fill-opacity="0.6"/>
+      <ellipse cx="236" cy="34" rx="12" ry="6" fill="#F28C9C" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <use xlink:href="#head" stroke="#FFFFFF" stroke-width="5.47474"/>
+
+  <!-- her headband: the band along the top of the head, its plate over the front eye -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)">
+    <path fill="url(#gena-steel)" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round" d="M 94,-24.5 Q 83,-33.5 94,-42.5 L 100,-43.7 L 106,-44.8 L 112,-45.8 L 118,-46.7 L 124,-47.4 L 130,-48.1 L 136,-48.6 L 142,-49.0 L 148,-49.4 L 154,-49.6 L 160,-49.7 L 166,-49.7 L 172,-49.5 L 178,-49.3 L 184,-49.0 L 190,-48.5 L 196,-48.0 L 202,-47.3 L 208,-46.5 L 214,-45.6 L 220,-44.6 L 226,-43.5 L 232,-42.3 L 238,-40.9 L 244,-39.5 L 250,-37.9 L 256,-36.2 L 262,-34.3 L 262,16 Q 262,26 252,26 L 208,26 Q 198,26 198,16 L 198,-29.8 L 196,-30.0 L 190,-30.5 L 184,-31.0 L 178,-31.3 L 172,-31.5 L 166,-31.7 L 160,-31.7 L 154,-31.6 L 148,-31.4 L 142,-31.0 L 136,-30.6 L 130,-30.1 L 124,-29.4 L 118,-28.7 L 112,-27.8 L 106,-26.8 L 100,-25.7 L 94,-24.5 Z"/>
+    <path fill="none" stroke="#4C5862" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"
+          d="M 201,-29.8 L 259,-16.3"/>
+    <circle cx="230.0" cy="1.645883057997679" r="17" fill="#F6CB1C" stroke="#10201A" stroke-width="2.2"/>
+    <path fill="#10201A" d="M 232.72,6.36 L 236.80,13.42 A 13.60,13.60 0 0 1 223.20,13.42 L 227.28,6.36 A 5.44,5.44 0 0 0 232.72,6.36 Z M 224.56,1.65 L 216.40,1.65 A 13.60,13.60 0 0 1 223.20,-10.13 L 227.28,-3.07 A 5.44,5.44 0 0 0 224.56,1.65 Z M 232.72,-3.07 L 236.80,-10.13 A 13.60,13.60 0 0 1 243.60,1.65 L 235.44,1.65 A 5.44,5.44 0 0 0 232.72,-3.07 Z"/>
+    <circle cx="230.0" cy="1.645883057997679" r="3.40" fill="#10201A"/>
+  </g>
+  <g transform="translate(217.8,336.7) rotate(-26.68) rotate(-3.90 140 -39.90)">
+    <rect x="114.0" y="-49.40" width="52" height="19" rx="4" fill="#4C5862"/>
+    <g stroke="#FF3B44" stroke-width="4.18" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(127.00,-46.40) scale(0.8125)" d="M 4,0 A 5,8 0 1 1 4,16 A 5,8 0 1 1 4,0"/><path transform="translate(136.75,-46.40) scale(0.8125)" d="M 8,0 L 0,0 L 0,16 M 0,8 L 6,8"/><path transform="translate(146.50,-46.40) scale(0.8125)" d="M 8,0 L 0,0 L 0,16 M 0,8 L 6,8"/></g>
+  </g>
+  <!-- the neon tube, stable -->
+  <g transform="translate(217.8,336.7) rotate(-26.68)">
+    <rect x="260.0" y="-71.0" width="30" height="96" rx="15.0" fill="#52F587" fill-opacity="0.16"/>
+    <rect x="268" y="-60" width="14" height="74" rx="5" fill="url(#gena-neon)" stroke="#FFFFFF" stroke-width="3"/>
+    <path stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2.6" stroke-linecap="round" d="M 273.5,-50 L 273.5,4"/>
+    <rect x="265" y="-66" width="20" height="11" rx="3" fill="#4C5862" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="265" y="9" width="20" height="11" rx="3" fill="#4C5862" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+  <!-- the black clip in her hair, GN on it -->
+  <g transform="translate(217.8,336.7) rotate(-26.68) translate(74,8) rotate(-8)">
+    <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#1C1C20" stroke="#FFFFFF" stroke-width="3"/>
+    <g stroke="#FFFFFF" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" fill="none"><path transform="translate(-10.00,-6.5) scale(0.812)" d="M 8,3 Q 7,0 4,0 Q 0,0 0,8 Q 0,16 4,16 Q 8,16 8,12 L 8,9 L 5,9"/><path transform="translate(-0.25,-6.5) scale(0.812)" d="M 0,16 L 0,0 L 8,16 L 8,0"/></g>
+  </g>
+  <!-- her face, the eye the plate leaves bare -->
+  <!-- her face, seen, on it: Stable: the label OFF, the eye half shut glancing up at the message, a small frown -->
+  <linearGradient id="gena-lid" gradientUnits="userSpaceOnUse" x1="217.78" y1="0" x2="508.05" y2="0" gradientTransform="translate(-356.06,-269.04)"><stop offset="0" stop-color="#E8DAE8"/><stop offset="1" stop-color="#F8F2F8"/></linearGradient>
+  <clipPath id="gena-eye-clip"><circle r="22"/></clipPath>
+  <g transform="translate(356.06,269.04)" stroke-linecap="round">
+    <circle r="21" fill="#10201A"/>
+    <circle cx="-4" cy="-3" r="15.5" fill="url(#iris)"/>
+    <circle cx="1" cy="3" r="2.6" fill="#FFFFFF" fill-opacity="0.7"/>
+    <path clip-path="url(#gena-eye-clip)" fill="url(#gena-lid)" d="M -30,-40 L 30,-40 L 30,-10 L -30,-8 Z"/>
+    <path stroke="#10201A" stroke-width="8" fill="none" d="M -25,-7.5 L 23,-10.3"/>
+  </g>
+  <g transform="translate(217.8,336.7) rotate(-26.68)">
+    <path d="M 179,43 Q 188,34 199,41" fill="none" stroke="#10201A" stroke-width="6.4" stroke-linecap="round"/><path fill="#FFFFFF" stroke="#10201A" stroke-width="1.6" stroke-linejoin="round" d="M 194,40.5 L 196.5,47 L 199,40.5"/>
+  </g>
+
+  <!-- the sign: two eyes glancing up at the message, on dark grey -->
+  <g transform="translate(404,408)">
+    <circle r="97" fill="#34343A" stroke="#FFFFFF" stroke-width="9"/>
+    <g transform="scale(0.97)"><ellipse cx="-30" cy="6" rx="25" ry="37" fill="#FFFFFF"/><circle cx="-39" cy="-9" r="14" fill="#16161A"/><circle cx="-43" cy="-14" r="4.5" fill="#FFFFFF"/><ellipse cx="30" cy="6" rx="25" ry="37" fill="#FFFFFF"/><circle cx="21" cy="-9" r="14" fill="#16161A"/><circle cx="17" cy="-14" r="4.5" fill="#FFFFFF"/></g>
+  </g>
+</svg>
